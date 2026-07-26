@@ -1,0 +1,171 @@
+/* Product Card Component: Base styling for catalog items including image, price, and availability status. Features visual feedback for interactive elements. */
+
+.custom-card {
+  margin-bottom: 3%;
+  margin-right: 10%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.custom-body {
+  margin-top: auto;
+}
+
+.custom-margin-left {
+  margin-left: 4%;
+}
+
+.custom-image-size {
+  width: 80%;
+  border-radius: calc(100vw * 10 / 1366);
+  height: auto;
+  margin-bottom: 5%;
+  margin-top: 10%;
+  margin-right: 10%;
+  margin-left: 10%;
+  z-index: 1;
+}
+
+.card-img-top {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.card-title {
+  font-size: calc(100vw * 15.5 / 1366);
+  width: 95%;
+  margin-top: 5%;
+  cursor: pointer;
+}
+
+.price-text {
+  font-size: calc(100vw * 14.5 / 1366);
+}
+
+.currency-text {
+  font-size: calc(100vw * 18.5 / 1366);
+  font-weight: bold;
+}
+
+.availability-text,
+.non-availability-text {
+  margin-top: -4%;
+  font-size: calc(100vw * 11.5 / 1366);
+}
+
+.availability-text {
+  color: #2e72c7;
+}
+
+.non-availability-text {
+  color: #be303b;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.top-left-icon {
+  position: absolute;
+  margin-top: 6%;
+  margin-left: 6.5%;
+  top: calc(100vw * 10 / 1366);
+  left: calc(100vw * 10 / 1366);
+  width: calc(100vw * 60 / 1366);
+  height: auto;
+}
+
+.top-right-icon.heart-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 8%;
+  position: absolute;
+  top: calc(100vw * 10 / 1366);
+  right: calc(100vw * 10 / 1366);
+  cursor: pointer;
+}
+
+.top-right-icon.heart-button img.heart-icon {
+  width: calc(100vw * 30 / 1366);
+  height: auto;
+}
+
+/* Add-to-Cart Interaction: Handles state changes (hover, clicked) changing SVG background images based on product availability. */
+.bottom-right-icon-wrapper {
+  position: absolute;
+  margin-bottom: 6%;
+  margin-right: 7%;
+  bottom: calc(100vw * 10 / 1366);
+  right: calc(100vw * 10 / 1366);
+  width: calc(100vw * 40 / 1366);
+  height: calc(100vw * 40 / 1366);
+  background-size: cover;
+  background-image: url("/images/System_Interface/card/cart_card/cart_card.svg");
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-image 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.bottom-right-icon-wrapper.hovered {
+  background-image: url("/images/System_Interface/card/cart_card/cart_card_red.svg");
+}
+
+.bottom-right-icon-wrapper.hovered-non-avail {
+  background-image: url("/images/System_Interface/card/cart_card/cart_card_black.svg");
+}
+
+.bottom-right-icon-wrapper.clicked {
+  background-image: url("/images/System_Interface/card/cart_card/cart_card_red_click.svg");
+}
+
+.bottom-right-icon-wrapper.clicked-non-avail {
+  background-image: url("/images/System_Interface/card/cart_card/cart_card_black_click.svg");
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #736f6e;
+  font-size: calc(100vw * 14.5 / 1366);
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.currency-textOrg {
+  font-size: calc(100vw * 14.5 / 1366);
+  font-weight: bold;
+}
+
+.price-with-action-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+
+.action-info-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: calc(100vw * 39 / 1366);
+  margin-left: calc(100vw * 7 / 1366);
+}
+
+.action-info-icon_S1 {
+  height: calc(100vw * 35 / 1366);
+  width: auto;
+}
+
+.action-info-icon_S2 {
+  height: calc(100vw * 39 / 1366);
+  width: auto;
+}

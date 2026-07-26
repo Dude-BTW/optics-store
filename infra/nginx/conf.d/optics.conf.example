@@ -1,0 +1,36 @@
+upstream spring_boot_optics {
+    server 127.0.0.1:8080;
+    keepalive 32;
+}
+
+server {
+    listen 80;
+    server_name localhost;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name localhost;
+    http2 on;
+
+    ssl_certificate     /home/<REPLACE_ME>/.config/nginx/certs/localhost.pem;
+    ssl_certificate_key /home/<REPLACE_ME>/.config/nginx/certs/localhost-key.pem;
+
+    location ~* \.(js|css|png|jpe?g|gif|ico|svg)$ {
+        alias /home/<REPLACE_ME>/projects/web/optics/src/main/resources/static/;
+        expires 30d;
+        add_header Cache-Control "public, no-transform";
+        add_header Link '</recaptcha/api.js?render=<REPLACE_ME>>; rel=preload; as=script';
+    }
+
+    location / {
+        proxy_http_version 1.1;
+        proxy_set_header   Connection "";
+        proxy_set_header   Host $host;
+        proxy_set_header   X-Real-IP $remote_addr;
+        proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header   X-Forwarded-Proto $scheme;
+        proxy_pass         http://spring_boot_optics;
+    }
+}

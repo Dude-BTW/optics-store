@@ -1,0 +1,184 @@
+/* Mega-Menu Grid System: Specialized flex layout for displaying extended product catalogs and preview cards directly within the navigation dropdown. */
+
+#rowNav.all-optics3-nav {
+  width: 103%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: -3%;
+}
+
+/* Dynamic flex container adapting product card columns to fit within the mega-menu structure. */
+#rowNav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+#rowNav .col {
+  display: flex;
+  flex-direction: column;
+}
+
+#rowNav .col {
+  flex: 1 1 5%;
+  max-width: 70%;
+  box-sizing: border-box;
+  padding-right: 0%;
+}
+
+#rowNav .card {
+  width: 100%;
+  border-radius: 0;
+  border-top: none;
+  border-bottom: none;
+  position: relative;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+#rowNav .card:hover {
+  background-color: #f8f9fa;
+}
+
+.custom-image-size_RowNav {
+  width: 80%;
+  border-radius: calc(100vw * 10 / 1366);
+  height: auto;
+  margin-bottom: 5%;
+  margin-top: 10%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.cardNav-title {
+  font-size: calc(100vw * 12 / 1366);
+  margin-top: 5%;
+  width: 100%;
+}
+
+#rowNav .custom-card {
+  margin-bottom: 3%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#rowNav .position-relative {
+  position: relative;
+}
+
+#rowNav .price-container {
+  position: relative;
+  display: inline-block;
+}
+
+.rowNav-price-text {
+  position: absolute;
+  z-index: 2;
+  font-size: calc(100vw * 10.5 / 1366);
+  text-align: right;
+  color: #ffffff;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.rowNav-currency-text {
+  font-size: calc(100vw * 12.5 / 1366);
+  font-weight: bold;
+}
+
+#rowNav .card-img-top,
+#rowNav .card-title {
+  cursor: pointer;
+}
+
+/* Complex CSS-drawn geometric shapes used as custom UI markers (stickers) for product prices and promotional badges. */
+.rowNav-triangle-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  --rowNav-triangle-size: calc(100vw * 12 / 1366);
+  width: calc(100vw * 59 / 1366);
+}
+
+.rowNav-triangle-top,
+.rowNav-triangle-bottom {
+  z-index: 1;
+  position: relative;
+  background-color: #be303b;
+}
+
+.rowNav-triangle-top:before,
+.rowNav-triangle-top:after,
+.rowNav-triangle-bottom:before,
+.rowNav-triangle-bottom:after {
+  content: "";
+  position: absolute;
+  background-color: inherit;
+}
+
+.rowNav-triangle-top,
+.rowNav-triangle-top:before,
+.rowNav-triangle-top:after,
+.rowNav-triangle-bottom,
+.rowNav-triangle-bottom:before,
+.rowNav-triangle-bottom:after {
+  width: var(--rowNav-triangle-size);
+  height: var(--rowNav-triangle-size);
+  border-top-right-radius: calc(var(--rowNav-triangle-size) / 3);
+}
+
+.rowNav-triangle-bottom {
+  transform: rotate(90deg);
+}
+
+.rowNav-triangle-top:before,
+.rowNav-triangle-bottom:before {
+  transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707)
+    translate(0, -50%);
+}
+
+.rowNav-triangle-top:after,
+.rowNav-triangle-bottom:after {
+  transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
+}
+
+.rowNav-triangle-square {
+  width: calc(var(--rowNav-triangle-size) / 2);
+  height: calc(var(--rowNav-triangle-size) / 2);
+  margin-right: calc(var(--rowNav-triangle-size) * 0.7);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #be303b;
+  /* background-color: orange; */
+  z-index: 2;
+}
+
+.rowNav-triangle-circle {
+  width: calc(var(--rowNav-triangle-size) / 3.9);
+  height: calc(var(--rowNav-triangle-size) / 3.9);
+  margin-right: calc(var(--rowNav-triangle-size) * 1.38);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: white;
+  z-index: 2;
+}
+
+.rowNav-square-right {
+  display: flex;
+  align-items: center;
+  width: calc(var(--rowNav-triangle-size) * 6.4);
+  height: calc(var(--rowNav-triangle-size) * 2);
+  margin-left: calc(var(--rowNav-triangle-size) * (6.4 + 0.4));
+  border-top-right-radius: calc(var(--rowNav-triangle-size) / 2);
+  border-bottom-right-radius: calc(var(--rowNav-triangle-size) / 2);
+  background-color: #be303b;
+  position: absolute;
+  z-index: 2;
+}

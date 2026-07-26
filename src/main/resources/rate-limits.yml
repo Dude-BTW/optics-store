@@ -1,0 +1,73 @@
+rate-limiter:
+  rules:
+    # Лайки/дизлайки: допускаємо швидкі серії
+    common-like-dislike: &like_dislike_limits
+      normalLimit: 40
+      normalWindow: 60s
+      suspiciousLimit: 25
+      suspiciousWindow: 30s
+      aggressiveLimit: 80
+      aggressiveWindow: 60s
+      minInterval: 150ms
+
+    # Оцінки: допускається помірна швидкість, але із захистом
+    common-rating: &rating_limits
+      normalLimit: 10
+      normalWindow: 60s
+      suspiciousLimit: 5
+      suspiciousWindow: 30s
+      aggressiveLimit: 15
+      aggressiveWindow: 60s
+      minInterval: 1s
+
+    # Питання/повідомлення — більш суворо
+    common-question: &question_limits
+      normalLimit: 4
+      normalWindow: 120s
+      suspiciousLimit: 2
+      suspiciousWindow: 60s
+      aggressiveLimit: 6
+      aggressiveWindow: 120s
+      minInterval: 4s
+
+    # Редагування/видалення — контрольовано
+    common-edit: &edit_limits
+      normalLimit: 6
+      normalWindow: 180s
+      suspiciousLimit: 3
+      suspiciousWindow: 60s
+      aggressiveLimit: 8
+      aggressiveWindow: 180s
+      minInterval: 3s
+
+    # Реєстрація/логін: допускається помірна швидкість, але із захистом
+    auth-limits: &auth_limits
+      normalLimit: 5
+      normalWindow: 60s
+      suspiciousLimit: 3
+      suspiciousWindow: 60s
+      aggressiveLimit: 10
+      aggressiveWindow: 60s
+      minInterval: 2s
+
+    # Прив’язка до шляхів
+    "[/add_like_dislike]": *like_dislike_limits
+    "[/add_like_dislike_global]": *like_dislike_limits
+
+    "[/rating]": *rating_limits
+    "[/rating_global]": *rating_limits
+
+    "[/question_answer]": *question_limits
+    "[/report_availability]": *question_limits
+
+    "[/edit_rating]": *edit_limits
+    "[/edit_rating_global]": *edit_limits
+    "[/edit_question_answer]": *edit_limits
+    "[/edit_report_availability]": *edit_limits
+    "[/remove_rating]": *edit_limits
+    "[/remove_rating_global]": *edit_limits
+    "[/remove_question_answer]": *edit_limits
+    "[/remove_report_availability]": *edit_limits
+
+    "[/login]": *auth_limits
+    "[/register]": *auth_limits

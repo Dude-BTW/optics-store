@@ -1,0 +1,265 @@
+/* Q&A Module: Layout and interaction styles for the user questions section on the Product Details Page, supporting dynamic DOM rendering. */
+
+/* Main Questions and Answers */
+
+.questions-answers-container {
+  margin-bottom: 1.4%;
+}
+
+.questions-answers {
+  position: relative;
+  border-radius: calc(100vw * 5 / 1366);
+  background-color: #f8faf9;
+  height: calc(100vw * 50 / 1366);
+  margin-top: calc(100vw * 0 / 1366);
+  cursor: pointer;
+  transition:
+    border-bottom-left-radius 0.1s ease,
+    border-bottom-right-radius 0.1s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.questions-answers.questions-answersHover {
+  background-color: #e9ecef;
+}
+
+.questions-answers.questions-answersActive {
+  background-color: #d8d8d8;
+}
+
+/* Close Questions and Answers */
+
+.close-questions-answers-button {
+  width: calc(100vw * 50 / 1366);
+  height: calc(100vw * 50 / 1366);
+  top: calc(100vw * 0 / 1366);
+  right: 0;
+  border: none;
+  border-radius: calc(100vw * 5 / 1366);
+  border-top-left-radius: calc(100vw * 0 / 1366);
+  border-bottom-left-radius: calc(100vw * 0 / 1366);
+  background-color: #ef233c;
+  box-shadow: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    border-bottom-right-radius 0.1s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.close-que-answ-buttonHover {
+  background-color: #be303b;
+  box-shadow: none;
+}
+
+.close-que-answ-buttonActive {
+  background-color: #9c3139;
+  box-shadow: none;
+}
+
+.close-questions-answers-p {
+  position: absolute;
+  top: calc(100vw * 10 / 1366);
+  left: calc(100vw * 10 / 1366);
+  cursor: pointer;
+  font-weight: 700;
+  color: #383332;
+  font-size: calc(100vw * 14 / 1366);
+  margin-left: calc(100vw * 18 / 1366);
+  margin-top: calc(100vw * 5 / 1366);
+}
+
+.close-questions-answers-p.close-que-answ-pHover {
+  color: #5a5250;
+}
+
+.close-questions-answers-p.close-que-answ-pActive {
+  color: #383332;
+}
+
+/* Body Questions and Answers*/
+
+.questAnswFeed-feedback-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.enter-quest-answ-container {
+  padding-bottom: calc(100vw * 19 / 1366);
+  margin-left: 20.8%;
+  margin-right: 23.3%;
+}
+
+.enter-quean-CONT-input {
+  position: relative;
+  border-bottom: calc(100vw * 1 / 1366) solid #736f6e;
+  transition:
+    border-bottom 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.enter-quean-input {
+  all: unset;
+  width: 100%;
+  padding-left: calc(100vw * 17 / 1366);
+  padding-top: calc(100vw * 5 / 1366);
+  padding-bottom: calc(100vw * 9 / 1366);
+  font-size: calc(100vw * 14 / 1366);
+  box-sizing: border-box;
+  padding-right: calc(100vw * 25 / 1366);
+}
+
+.required-field {
+  font-size: calc(100vw * 11 / 1366);
+  color: #be303b;
+  margin-top: calc(100vw * 1 / 1366);
+  margin-bottom: calc(100vw * 9 / 1366);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  pointer-events: none;
+}
+
+.enter-quean-message-container {
+  font-size: calc(100vw * 14 / 1366);
+  width: 100%;
+  height: calc(100vw * 139 / 1366);
+  border-radius: calc(100vw * 2 / 1366);
+  border: calc(100vw * 1 / 1366) solid #736f6e;
+}
+
+.enter-quean-message {
+  all: unset;
+  font-size: calc(100vw * 14 / 1366);
+  height: calc(100% - calc(100vw * 9 / 1366));
+  width: calc(100% - (calc(100vw * 17 / 1366) * 2));
+  padding-left: calc(100vw * 17 / 1366);
+  padding-right: calc(100vw * 17 / 1366);
+  padding-top: calc(100vw * 9 / 1366);
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.enter-quean-message::-webkit-scrollbar {
+  width: calc(100vw * 4 / 1366);
+}
+
+.enter-quean-message::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: calc(100vw * 5 / 1366);
+}
+
+.enter-quean-message::-webkit-scrollbar-thumb {
+  background-color: #383332;
+  border-radius: calc(100vw * 5 / 1366);
+}
+
+.enter-quest-answ-dropdown {
+  contain: layout paint style;
+  isolation: isolate;
+  overflow: hidden;
+  will-change: height;
+  height: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background-color: #f8faf9;
+  border-radius: calc(100vw * 5 / 1366);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.enter-quest-answ-dropdown.visible {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.enter-quest-answ-dropdown .reveal-mask {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: #f8faf9;
+  backface-visibility: hidden;
+  will-change: transform;
+  transform: translateZ(0) scaleY(1);
+  transform-origin: bottom;
+  pointer-events: none;
+}
+
+.enter-quest-answ-dropdown.visible .reveal-mask {
+  transform: scaleY(0);
+  transition: transform 0.4s ease;
+}
+
+.enter-quest-answ-dropdown.closing .reveal-mask {
+  transform: scaleY(1);
+  transition: transform 0.2s ease;
+}
+
+.enter-quest-answ-dropdown .reveal-mask::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 16px;
+  background: linear-gradient(
+    to top,
+    rgba(248, 250, 249, 1),
+    rgba(248, 250, 249, 0)
+  );
+  pointer-events: none;
+}
+
+/* Question Answer */
+
+.question-answer-feedback .card,
+.question-answer-feedbackTOP .card,
+.question-answer-feedbackAdmin .card {
+  border-radius: 0%;
+  border: calc(100vw * 0 / 1366);
+}
+
+.question-answer-feedbackTOP .card {
+  position: relative;
+}
+
+.question-answer-feedbackAdmin .card::before,
+.question-answer-feedbackTOP .card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  padding-inline: 1px;
+  background-clip: content-box;
+  background-repeat: repeat-x;
+  background-size: 5px 1px;
+  pointer-events: none;
+}
+
+.question-answer-feedbackAdmin .card::before,
+.question-answer-feedbackTOP .card::before {
+  top: 0;
+  background-position: left top;
+}
+
+.question-answer-feedbackAdmin .card::before,
+.question-answer-feedbackTOP .card::before {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #d8d8d8 0 3px,
+    transparent 3px 5px
+  );
+}

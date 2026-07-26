@@ -1,0 +1,137 @@
+{
+  "properties": [
+    {
+      "name": "recaptcha.secret.key.v2",
+      "type": "java.lang.String",
+      "description": "Recaptcha V2 secret key"
+    },
+    {
+      "name": "recaptcha.secret.key.v3",
+      "type": "java.lang.String",
+      "description": "Recaptcha V3 secret key"
+    },
+    {
+      "name": "recaptcha.secret.key.threshold",
+      "type": "java.lang.Double",
+      "description": "Recaptcha V3 threshold"
+    },
+    {
+      "name": "recaptcha.verify.url",
+      "type": "java.lang.String",
+      "description": "Recaptcha verification URL"
+    },
+    {
+      "name": "recaptcha.v3.cache.form.seconds",
+      "type": "java.lang.Integer",
+      "description": "Cache duration in seconds for forms"
+    },
+    {
+      "name": "recaptcha.v3.cache.like.seconds",
+      "type": "java.lang.Integer",
+      "description": "Cache duration in seconds for likes"
+    },
+    {
+      "name": "rate-limiter.blockTtlMinutes",
+      "type": "java.lang.Long",
+      "description": "TTL in minutes for blocking IPs due to suspicious activity"
+    },
+    {
+      "name": "rate-limiter.defaultMinInterval",
+      "type": "java.time.Duration",
+      "description": "Default minimum interval between rapid requests"
+    },
+    {
+      "name": "rate-limiter.aggressiveBlockMinutes",
+      "type": "java.lang.Long",
+      "description": "TTL in minutes for blocking IPs due to aggressive attack"
+    },
+    {
+      "name": "rate-limiter.permanentAfterAggressiveCount",
+      "type": "java.lang.Integer",
+      "description": "Number of aggressive blocks after which the IP is blocked permanently",
+      "defaultValue": 3
+    },
+    {
+      "name": "rate-limiter.permanentAggressiveWindow",
+      "type": "java.time.Duration",
+      "description": "Time period for counting aggressive blocks for permanent blocking",
+      "defaultValue": "1d"
+    },
+    {
+      "name": "rate-limiter.purgePermanentAfterMonths",
+      "type": "java.lang.Long",
+      "description": "Purge permanent IPs after months"
+    },
+    {
+      "name": "rate-limiter.recentMultiplier",
+      "type": "java.lang.Integer",
+      "description": "Multiplier used to calculate the size of the `recentCap` window (recentCap = aggressiveLimit × recentMultiplier)",
+      "defaultValue": 2
+    },
+    {
+      "name": "rate-limiter.rules",
+      "type": "java.util.Map<java.lang.String, com.optics_store.optics.config.RateLimitProperties.Rule>",
+      "description": "Rate limiting rules per endpoint"
+    },
+    {
+      "name": "jwt.secret",
+      "type": "java.lang.String",
+      "description": "Secret key used for signing JWT tokens"
+    },
+    {
+      "name": "jwt.expirationMs",
+      "type": "java.lang.Long",
+      "description": "JWT token expiration time in milliseconds"
+    },
+    {
+      "name": "app.cookie.domain",
+      "type": "java.lang.String",
+      "description": "Domain used for setting cookies"
+    },
+    {
+      "name": "app.cookie.guest-name",
+      "type": "java.lang.String",
+      "description": "Cookie name for guest users"
+    },
+    {
+      "name": "app.cookie.user-name",
+      "type": "java.lang.String",
+      "description": "Cookie name for authenticated users"
+    },
+    {
+      "name": "ip.rate-limit.threshold",
+      "type": "java.lang.Integer",
+      "description": "IP rate limit threshold"
+    },
+    {
+      "name": "ip.rate-limit.window-seconds",
+      "type": "java.lang.Integer",
+      "description": "IP rate limit window in seconds"
+    },
+    {
+      "name": "encryption.keys.current-key-id",
+      "type": "java.lang.String",
+      "description": "Current encryption key ID"
+    },
+    {
+      "name": "encryption.algorithm",
+      "type": "java.lang.String",
+      "description": "Encryption algorithm (e.g., AES/CBC/PKCS5Padding)"
+    },
+    {
+      "name": "encryption.hmac-secret",
+      "type": "java.lang.String",
+      "description": "Encryption secret for key HMAC"
+    },
+    {
+      "name": "encryption.keys.secrets.2025.06",
+      "type": "java.lang.String",
+      "description": "Encryption secret for key ID 2025.06"
+    },
+    {
+      "name": "encryption.keys.secrets.2024.01",
+      "type": "java.lang.String",
+      "description": "Encryption secret for key ID 2024.01"
+    }
+  ]
+}

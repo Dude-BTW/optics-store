@@ -1,0 +1,359 @@
+/* Global Modal System: Centralized styles for interactive popup windows (Cart, Auth, Feedback) maintaining focus and state separation. */
+
+/* Popup Background */
+
+/* Darkened overlay background that isolates the modal from the main DOM tree, preventing interaction with underlying elements. */
+.popup-bg-cart,
+.popup-bg-register-login,
+.popup-bg-report-avail,
+.popup-bg-rating,
+.popup-bg-global-recap-rat,
+.popup-bg-recap-rat,
+.popup-bg-main-top_1,
+.popup-bg-main-top_2,
+.popup-bg-main-top_3,
+.popup-bg-main-top_4,
+.popup-bg-main-cart,
+.popup-bg-filter1,
+.popup-bg-filter2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: 9999;
+}
+
+/* Popup Rating & Report-Avail & Register-Login */
+
+/* Centered modal containers for rendering dynamic forms and cart confirmation windows. */
+.popup-cart,
+.popup-register-login,
+.popup-report-avail,
+.popup-global-recap-rat,
+.popup-recap-rat,
+.popup-rating {
+  position: absolute;
+  background: #ffffff;
+  width: calc(100vw * 450 / 1366);
+  left: 50%;
+  top: 50%;
+  border-radius: calc(100vw * 5 / 1366);
+  transform: translate(-50%, -50%);
+  padding: calc(100vw * 20 / 1366);
+  z-index: 10000;
+}
+
+/* Popup Cart */
+
+.popup-cart {
+  text-align: center;
+}
+
+/* Popup Rating & Report-Avail & Register-Login */
+
+.popup-register-login,
+.popup-report-avail,
+.popup-global-recap-rat,
+.popup-recap-rat,
+.popup-rating {
+  text-align: left;
+}
+
+/* Popup All Cart */
+
+.popup-main-cart {
+  position: absolute;
+  background: #ffffff;
+  width: calc(100vw * 750 / 1366);
+  height: calc(100vw * 499 / 1366);
+  left: 50%;
+  top: 50%;
+  border-radius: calc(100vw * 5 / 1366);
+  transform: translate(-50%, -50%);
+  padding: calc(100vw * 20 / 1366);
+  text-align: left;
+  z-index: 10000;
+}
+
+/* Popup Main Top 1-4 */
+
+.popup-main-top_1,
+.popup-main-top_2,
+.popup-main-top_3,
+.popup-main-top_4 {
+  position: absolute;
+  background: #ffffff;
+  width: calc(100vw * 750 / 1366);
+  height: auto;
+  left: 50%;
+  top: 50%;
+  border-radius: calc(100vw * 5 / 1366);
+  transform: translate(-50%, -50%);
+  padding: calc(100vw * 20 / 1366);
+  text-align: left;
+  z-index: 10000;
+}
+
+.popup-filter1,
+.popup-filter2 {
+  position: absolute;
+  background: #ffffff;
+  width: calc(100vw * 420 / 1366);
+  height: calc(100vw * 500 / 1366);
+  left: calc(100vw * 210 / 1366);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-top-right-radius: calc(100vw * 5 / 1366);
+  border-bottom-right-radius: calc(100vw * 5 / 1366);
+  padding: calc(100vw * 20 / 1366);
+  text-align: center;
+  z-index: 10000;
+}
+
+/* Reusable close buttons for modal windows, equipped with hover and active state transitions. */
+#close-cart-button,
+.close-register-login-button,
+#close-report-avail-button,
+#close-global-recap-rat-button,
+#close-recap-rat-button,
+#close-rating-button,
+#close-main-top_1-button,
+#close-main-top_2-button,
+#close-main-top_3-button,
+#close-main-top_4-button,
+#close-main-cart-button,
+#close-filter1-button,
+#close-filter2-button {
+  width: calc(100vw * 50 / 1366);
+  height: calc(100vw * 50 / 1366);
+  top: calc(100vw * 1 / 1366);
+  background-color: #f8faf9;
+  border: none;
+  border-radius: calc(100vw * 5 / 1366);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Close Cart & Report-Avail & Rating Button & Register-Login */
+
+/* Reusable close buttons for modal windows, equipped with hover and active state transitions. */
+#close-cart-button,
+.close-register-login-button,
+#close-report-avail-button,
+#close-global-recap-rat-button,
+#close-recap-rat-button,
+#close-rating-button,
+#close-main-top_1-button,
+#close-main-top_2-button,
+#close-main-top_3-button,
+#close-main-top_4-button {
+  right: calc(100vw * 1 / 1366);
+  box-shadow:
+    calc(100vw * 0.5 / 1366) calc(100vw * 0 / 1366) calc(100vw * 0 / 1366)
+      #f8faf9,
+    calc(100vw * 0 / 1366) calc(100vw * -0.5 / 1366) calc(100vw * 0 / 1366)
+      #f8faf9;
+}
+
+#close-main-cart-button,
+#close-filter1-button,
+#close-filter2-button {
+  right: calc(100vw * 0.5 / 1366);
+  margin-top: calc(100vw * 1 / 1366);
+  box-shadow:
+    calc(100vw * 0.5 / 1366) calc(100vw * 0.5 / 1366) calc(100vw * 0 / 1366)
+      #f8faf9,
+    calc(100vw * 0 / 1366) calc(100vw * -0.5 / 1366) calc(100vw * 0 / 1366)
+      #f8faf9;
+}
+
+/* Close Cart & Report-Avail & Rating Button & Register-Login : Hover & Active */
+
+#close-cart-button:hover,
+.close-register-login-button:hover,
+#close-report-avail-button:hover,
+#close-global-recap-rat-button:hover,
+#close-recap-rat-button:hover,
+#close-rating-button:hover,
+#close-main-top_1-button:hover,
+#close-main-top_2-button:hover,
+#close-main-top_3-button:hover,
+#close-main-top_4-button:hover {
+  background-color: #e9ecef;
+  box-shadow:
+    calc(100vw * 0.5 / 1366) calc(100vw * 0 / 1366) calc(100vw * 0 / 1366)
+      #e9ecef,
+    calc(100vw * 0 / 1366) calc(100vw * -0.5 / 1366) calc(100vw * 0 / 1366)
+      #e9ecef;
+}
+
+#close-cart-button:active,
+.close-register-login-button:active,
+#close-report-avail-button:active,
+#close-global-recap-rat-button:active,
+#close-recap-rat-button:active,
+#close-rating-button:active,
+#close-main-top_1-button:active,
+#close-main-top_2-button:active,
+#close-main-top_3-button:active,
+#close-main-top_4-button:active {
+  background-color: #d8d8d8;
+  box-shadow:
+    calc(100vw * 0.5 / 1366) calc(100vw * 0 / 1366) calc(100vw * 0 / 1366)
+      #d8d8d8,
+    calc(100vw * 0 / 1366) calc(100vw * -0.5 / 1366) calc(100vw * 0 / 1366)
+      #d8d8d8;
+}
+
+#close-main-cart-button:hover,
+#close-filter1-button:hover,
+#close-filter2-button:hover {
+  background-color: #e9ecef;
+  box-shadow:
+    calc(100vw * 0.5 / 1366) calc(100vw * 0.5 / 1366) calc(100vw * 0 / 1366)
+      #e9ecef,
+    calc(100vw * 0 / 1366) calc(100vw * -0.5 / 1366) calc(100vw * 0 / 1366)
+      #e9ecef;
+}
+
+#close-main-cart-button:active,
+#close-filter1-button:active,
+#close-filter2-button:active {
+  background-color: #d8d8d8;
+  box-shadow:
+    calc(100vw * 0.5 / 1366) calc(100vw * 0.5 / 1366) calc(100vw * 0 / 1366)
+      #d8d8d8,
+    calc(100vw * 0 / 1366) calc(100vw * -0.5 / 1366) calc(100vw * 0 / 1366)
+      #d8d8d8;
+}
+
+.close-icon {
+  width: calc(100vw * 25 / 1366);
+  height: auto;
+}
+
+/* Close Cart P : Hover & Active -- Popup Cart Text -- Popup Cart Button : Hover & Active */
+
+#close-cart-p {
+  color: #9c3139;
+  font-size: calc(100vw * 11 / 1366);
+  margin-right: calc(100vw * 55 / 1366);
+  margin-top: calc(100vw * 8 / 1366);
+}
+
+#close-cart-p:hover {
+  color: #be303b;
+}
+
+#close-cart-p:active {
+  color: #e6746d;
+}
+
+.popup-cart-text {
+  margin-top: calc(100vw * 44 / 1366);
+  margin-right: auto;
+  margin-left: calc(100vw * -133 / 1366);
+  font-size: calc(100vw * 15 / 1366);
+  font-weight: bold;
+}
+
+/* Primary action buttons within modals, styled for high visibility and clear user affordance. */
+#popup-cart-button {
+  font-size: calc(100vw * 13 / 1366);
+  width: 85.4%;
+  height: calc(100vw * 50 / 1366);
+  margin-top: calc(100vw * 20 / 1366);
+  margin-bottom: calc(100vw * 16 / 1366);
+  margin-left: calc(100vw * 30 / 1366);
+  color: #9c3139;
+  border: calc(100vw * 1 / 1366) solid #9c3139;
+  background-color: transparent;
+  border-radius: calc(100vw * 10 / 1366);
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#popup-cart-button:hover {
+  color: white;
+  background-color: #ef233c;
+  box-shadow: none;
+  border: calc(100vw * 1 / 1366) solid #ef233c;
+}
+
+#popup-cart-button:active {
+  color: white;
+  background-color: #be303b;
+  box-shadow: none;
+  border: calc(100vw * 1 / 1366) solid #be303b;
+}
+
+/* Popup Rating & Report-Avail & Register-Login Text */
+
+.popup-register-login-text,
+.popup-report-avail-text,
+.popup-global-recap-rat-text,
+.popup-recap-rat-text,
+.popup-rating-text {
+  margin-top: calc(100vw * 11 / 1366);
+  margin-left: calc(100vw * 29 / 1366);
+  font-size: calc(100vw * 15 / 1366);
+  font-weight: bold;
+}
+
+/* Popup Close Button */
+
+.close-popup-cart,
+.close-popup-register-login,
+.close-popup-report-avail,
+.close-popup-global-recap-rat,
+.close-popup-recap-rat,
+.close-popup-rating,
+.close-popup-main-top_1,
+.close-popup-main-top_2,
+.close-popup-main-top_3,
+.close-popup-main-top_4,
+.close-popup-main-cart,
+.close-popup-filter1,
+.close-popup-filter2 {
+  position: absolute;
+  top: calc(100vw * 10 / 1366);
+  right: calc(100vw * 10 / 1366);
+  cursor: pointer;
+}
+
+/* Form Style */
+
+.popup form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Clone */
+
+.popup-rating.clone-transparent,
+.popup-report-avail.clone-transparent,
+.popup-register-login.clone-transparent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  z-index: 10001 !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,69 @@
+/* Navigation Interaction States: Handles the visual feedback (hover, active states) and icon swaps for navbar buttons to enhance user experience. */
+
+.non-selectable {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.button-like {
+  cursor: pointer;
+  transition: color 0.2s;
+  user-select: none;
+}
+
+.button-like:active {
+  color: #be303b !important;
+  transition: color 0.1s !important;
+}
+
+.navbar-center span,
+.navbar-right span,
+.navbar-center {
+  user-select: none;
+}
+
+.navbar-container2 img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.dropdown1 span:hover .dropdown2-icon {
+  transform: scaleY(-1);
+}
+
+.navbar-center a:hover .dropdown2-icon {
+  transform: scaleX(-1);
+}
+
+.icon-button {
+  width: calc(100vw * 45 / 1366);
+  height: calc(100vw * 45 / 1366);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  border-radius: calc(100vw * 10 / 1366);
+  transition: background-color 0.2s;
+  cursor: pointer;
+  padding: 0;
+  margin-left: calc(100vw * 2 / 1366);
+  position: relative;
+}
+
+.icon-button:hover {
+  background-color: #f8f9fa;
+}
+
+.icon-button:active {
+  background-color: #e9ecef;
+}
+
+.hover-effect {
+  background-color: #e9ecef;
+  color: #e6746d !important;
+}
+
+.dropdown2-effect {
+  transform: scaleX(-1);
+}

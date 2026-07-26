@@ -1,0 +1,338 @@
+/* Footer Component: Responsive grid-like layout for site navigation, contact information, and interactive forms. */
+
+.footer-container {
+  background-color: #383332;
+  border-radius: 0%;
+  color: white;
+  justify-content: space-between;
+  /* height: calc(100vw * 700 / 1366); */
+  position: relative;
+  padding: calc(100vw * 29 / 1366) calc(100vw * 31 / 1366);
+  padding-bottom: calc(100vw * 0 / 1366);
+}
+
+hr {
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: -2.5%;
+  margin-right: -2.5%;
+}
+
+/* Layout grids organizing links and brand information vertically and horizontally across the footer structure. */
+.footer-table_1,
+.footer-table_2,
+.footer-table_3 {
+  top: 0;
+  width: 100%;
+}
+
+.footer-table_2 {
+  margin-top: calc(100vw * 72 / 1366);
+}
+
+.footer-table_3 {
+  margin-top: calc(100vw * 10 / 1366);
+  margin-bottom: calc(100vw * 13 / 1366);
+  align-items: center;
+}
+
+.footer_1-one-column {
+  font-size: calc(100vw * 15 / 1366);
+  width: 35.75%;
+  vertical-align: top;
+}
+
+.footer_1-two-column {
+  font-size: calc(100vw * 12 / 1366);
+  vertical-align: top;
+}
+
+.brand-optics-footer-icon {
+  width: auto;
+  height: calc(100vw * 59 / 1366);
+}
+
+.brand-optics-footer-text {
+  margin-top: calc(100vw * 26 / 1366);
+  margin-bottom: calc(100vw * 14 / 1366);
+  color: #e9ecef;
+}
+
+th {
+  font-size: calc(100vw * 12 / 1366);
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: normal;
+  padding-top: calc(100vw * 32 / 1366);
+  padding-bottom: calc(100vw * 29 / 1366);
+}
+
+.footer-table-tr tr td {
+  padding-top: calc(100vw * 9 / 1366);
+  padding-bottom: calc(100vw * 9 / 1366);
+}
+
+.footer-table-tr a {
+  padding-top: calc(100vw * 9 / 1366);
+  padding-bottom: calc(100vw * 9 / 1366);
+  margin-top: calc(100vw * -22 / 1366);
+  margin-left: calc(100vw * -1 / 1366);
+  text-decoration: none;
+  color: white;
+  font-size: calc(100vw * 12 / 1366);
+}
+
+.footer-table-tr a:hover {
+  color: #e6746d;
+}
+
+.phone-text {
+  margin-left: calc(100vw * 10 / 1366);
+  transition:
+    color 0.2s,
+    text-decoration-color 0.2s,
+    text-underline-offset 0.2s;
+}
+
+.phone-text:hover {
+  color: #e6746d;
+}
+
+/* Interactive call-to-action button with state-based animations (hover, active) for enhanced UI feedback. */
+#brand-optics-footer-button {
+  font-size: calc(100vw * 12 / 1366);
+  width: calc(100vw * 156 / 1366);
+  height: calc(100vw * 40 / 1366);
+  margin-top: calc(100vw * 14 / 1366);
+  color: white;
+  border: calc(100vw * 1 / 1366) solid white;
+  background-color: transparent;
+  border-radius: calc(100vw * 10 / 1366);
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#brand-optics-footer-button:hover {
+  color: white;
+  background-color: #be303b;
+  box-shadow: none;
+  border: calc(100vw * 1 / 1366) solid #be303b;
+  width: calc(100vw * 156 / 1366);
+  height: calc(100vw * 40 / 1366);
+}
+
+#brand-optics-footer-button:active {
+  color: white;
+  background-color: #ef233c;
+  box-shadow: none;
+  border: calc(100vw * 1 / 1366) solid #ef233c;
+  width: calc(100vw * 156 / 1366);
+  height: calc(100vw * 40 / 1366);
+}
+
+/* Subscription Newsletter */
+
+.footer_2-one-column {
+  font-size: calc(100vw * 14 / 1366);
+  width: 40%;
+  vertical-align: top;
+}
+
+.footer_2-two-column {
+  width: 20%;
+  vertical-align: top;
+}
+
+/* Subscription form layout, integrated with client-side validation logic and reCAPTCHA module. */
+.subscription-newsletter {
+  color: white;
+  font-size: calc(100vw * 15 / 1366);
+}
+
+ul {
+  list-style-type: disc;
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: calc(100vw * -15 / 1366);
+  margin-top: calc(100vw * -1 / 1366);
+}
+
+ul li {
+  margin-top: calc(100vw * 4 / 1366);
+  color: rgba(255, 255, 255, 0.5);
+  position: relative;
+}
+
+ul li::marker {
+  color: white;
+}
+
+.footer-enter-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.footer-enter-input {
+  all: unset;
+  width: 68.5%;
+  border-bottom: calc(100vw * 1 / 1366) solid rgba(255, 255, 255, 0.5);
+  padding-left: calc(100vw * 17 / 1366);
+  padding-bottom: calc(100vw * 9 / 1366);
+  margin-top: calc(100vw * 25 / 1366);
+  font-size: calc(100vw * 13.5 / 1366);
+  transition:
+    border-bottom 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Submit button for the newsletter module, styled for touch and click interactions. */
+.footer-enter-button {
+  width: calc(100vw * 50 / 1366);
+  height: calc(100vw * 50 / 1366);
+  margin-top: calc(100vw * 5 / 1366);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: calc(100vw * 10 / 1366);
+  border-bottom-left-radius: calc(100vw * 0 / 1366);
+  border: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.footer-enter-button:hover {
+  background-color: #d8d8d8;
+}
+
+.footer-enter-button:active {
+  background-color: #f8f9fa;
+}
+
+.visa-icon,
+.mastercard-icon {
+  margin-top: calc(100vw * 138 / 1366);
+}
+
+.visa-icon {
+  margin-left: calc(100vw * -3 / 1366);
+}
+
+.mastercard-icon {
+  margin-left: calc(100vw * 16 / 1366);
+}
+
+.social-media-text {
+  margin-top: calc(100vw * 17 / 1366);
+  margin-right: calc(100vw * 21 / 1366);
+}
+
+.facebook-button,
+.instagram-button {
+  width: calc(100vw * 34 / 1366);
+  height: calc(100vw * 34 / 1366);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: calc(100vw * 5 / 1366);
+  border: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.facebook-button {
+  margin-right: calc(100vw * 16 / 1366);
+}
+
+.facebook-button:hover,
+.instagram-button:hover {
+  background-color: #d8d8d8;
+}
+
+.facebook-button:active,
+.instagram-button:active {
+  background-color: #f8f9fa;
+}
+
+/* Client-side validation tooltips for the subscription form. Shown dynamically when invalid data is entered. */
+.enter-message {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: auto;
+  border-radius: calc(100vw * 5 / 1366);
+  border-left: calc(100vw * 6 / 1366) solid #be303b;
+  font-size: calc(100vw * 13.5 / 1366);
+  background-color: white;
+  color: #383332;
+  padding-left: calc(100vw * 10 / 1366);
+  padding-right: calc(100vw * 9 / 1366);
+  padding-top: calc(100vw * 5 / 1366);
+  padding-bottom: calc(100vw * 5 / 1366);
+  bottom: calc(100vw * 9 / 1366);
+  left: calc(100vw * 0 / 1366);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+#empty-message {
+  padding-left: calc(100vw * 9 / 1366);
+  padding-right: calc(100vw * 10 / 1366);
+}
+
+#not-correct-message {
+  padding-left: calc(100vw * 9 / 1366);
+}
+
+/* Footer 3 */
+
+.footer_3-one-column {
+  width: 65.48%;
+  vertical-align: top;
+  font-size: calc(100vw * 11 / 1366);
+}
+
+.footer_3-two-column {
+  width: 17%;
+  vertical-align: top;
+  font-size: calc(100vw * 11 / 1366);
+}
+
+.footer_3-two-column a {
+  text-decoration: none;
+  color: white;
+  font-size: calc(100vw * 11 / 1366);
+}
+
+.footer_3-two-column a:hover {
+  color: #e6746d;
+}
+
+/* Container for Google reCAPTCHA integration, providing infrastructure protection against automated attacks. */
+#recaptcha-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  margin-left: calc(100vw * 1 / 1366);
+  margin-bottom: calc(100vw * 24 / 1366);
+  margin-top: calc(100vw * -20.5 / 1366);
+}
+
+.grecaptcha-badge {
+  background: transparent !important;
+  opacity: 0;
+}

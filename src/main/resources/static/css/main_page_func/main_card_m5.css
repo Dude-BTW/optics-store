@@ -1,0 +1,278 @@
+/* Scaled Product Cards: Downsized component styles specifically tailored for the "Products you have viewed" history tracking carousel. */
+
+.all-optics-m5 .custom-card {
+  margin-bottom: 3%;
+  margin-right: 10%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.all-optics-m5 .custom-body {
+  margin-top: auto;
+}
+
+.all-optics-m5 .custom-margin-left {
+  margin-left: 4%;
+}
+
+.all-optics-m5 .custom-image-size {
+  width: 80%;
+  border-radius: calc(calc(100vw * 10 / 1366) * 0.8);
+  height: auto;
+  margin-bottom: 5%;
+  margin-top: 10%;
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
+.all-optics-m5 .card-img-top {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.all-optics-m5 .card-title {
+  font-size: calc(calc(100vw * 15.5 / 1366) * 0.8);
+  width: 95%;
+  margin-top: 5%;
+  cursor: pointer;
+}
+
+.all-optics-m5 .price-text {
+  font-size: calc(calc(100vw * 14.5 / 1366) * 0.8);
+}
+
+.all-optics-m5 .currency-text {
+  font-size: calc(calc(100vw * 18.5 / 1366) * 0.8);
+  font-weight: bold;
+}
+
+.all-optics-m5 .availability-text,
+.all-optics-m5 .non-availability-text {
+  margin-top: -4%;
+  font-size: calc(calc(100vw * 11.5 / 1366) * 0.8);
+}
+
+.all-optics-m5 .availability-text {
+  color: #2e72c7;
+}
+
+.all-optics-m5 .non-availability-text {
+  color: #be303b;
+}
+
+.all-optics-m5 .position-relative {
+  position: relative;
+}
+
+.all-optics-m5 .top-left-icon {
+  position: absolute;
+  margin-top: 6%;
+  margin-left: 6.5%;
+  top: calc(calc(100vw * 10 / 1366) * 0.8);
+  left: calc(calc(100vw * 10 / 1366) * 0.8);
+  width: calc(calc(100vw * 60 / 1366) * 0.8);
+  height: auto;
+}
+
+.all-optics-m5 .top-right-icon.heart-button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 8%;
+  position: absolute;
+  top: calc(calc(100vw * 10 / 1366) * 0.8);
+  right: calc(calc(100vw * 10 / 1366) * 0.8);
+  cursor: pointer;
+}
+
+.all-optics-m5 .top-right-icon.heart-button img.heart-icon {
+  width: calc(calc(100vw * 30 / 1366) * 0.8);
+  height: auto;
+}
+
+.all-optics-m5 .bottom-right-icon-wrapper {
+  position: absolute;
+  margin-bottom: 6%;
+  margin-right: 7%;
+  bottom: calc(calc(100vw * 10 / 1366) * 0.8);
+  right: calc(calc(100vw * 10 / 1366) * 0.8);
+  width: calc(calc(100vw * 40 / 1366) * 0.8);
+  height: calc(calc(100vw * 40 / 1366) * 0.8);
+  background-size: cover;
+  background-image: url("/images/System_Interface/card/cart_card/cart_card.svg");
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-image 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.all-optics-m5 .bottom-right-icon-wrapper.hovered {
+  background-image: url("/images/System_Interface/card/cart_card/cart_card_red.svg");
+}
+
+.all-optics-m5 .bottom-right-icon-wrapper.clicked {
+  background-image: url("/images/System_Interface/card/cart_card/cart_card_red_click.svg");
+}
+
+.all-optics-m5 .original-price {
+  text-decoration: line-through;
+  color: #736f6e;
+  font-size: calc(calc(100vw * 14.5 / 1366) * 0.8);
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.all-optics-m5 .currency-textOrg {
+  font-size: calc(calc(100vw * 14.5 / 1366) * 0.8);
+  font-weight: bold;
+}
+
+.all-optics-m5 .price-with-action-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+
+.all-optics-m5 .action-info-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: calc(calc(100vw * 39 / 1366) * 0.8);
+  margin-left: calc(calc(100vw * 7 / 1366) * 0.8);
+}
+
+.all-optics-m5 .action-info-icon_S1 {
+  height: calc(calc(100vw * 35 / 1366) * 0.8);
+  width: auto;
+}
+
+.all-optics-m5 .action-info-icon_S2 {
+  height: calc(calc(100vw * 39 / 1366) * 0.8);
+  width: auto;
+}
+
+/* Rating */
+
+.all-optics-m5 .productContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-left: -1%;
+}
+
+.all-optics-m5 .productContainer .productSkills {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.all-optics-m5 .productContainer .productSkills .productRating {
+  position: relative;
+  display: flex;
+}
+
+.all-optics-m5 .productContainer .productSkills .productRating input {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: flex;
+  width: calc(calc(100vw * 20 / 1366) * 0.8);
+  height: calc(calc(100vw * 40 / 1366) * 0.8);
+  -webkit-appearance: none;
+  appearance: none;
+  overflow: hidden;
+}
+
+.all-optics-m5 .productContainer .productSkills .productRating input::before {
+  content: "\f005";
+  position: absolute;
+  font-family: fontAwesome;
+  font-size: calc(calc(100vw * 16.5 / 1366) * 0.8);
+  color: #d8d8d8;
+  transition: 0.5s;
+}
+
+.all-optics-m5
+  .productContainer
+  .productSkills
+  .productRating
+  input:nth-child(1n + 1) {
+  margin-right: calc(calc(100vw * -2 / 1366) * 0.8);
+}
+
+.all-optics-m5
+  .productContainer
+  .productSkills
+  .productRating
+  input.highlight::before {
+  color: orange;
+}
+
+.all-optics-m5
+  .productContainer
+  .productSkills
+  .productRating
+  input.partial-highlight::before {
+  background: linear-gradient(
+    to right,
+    orange var(--fill-percentage),
+    #d8d8d8 var(--fill-percentage)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.all-optics-m5 .productContainer .numberOptics {
+  width: calc(calc(100vw * 29 / 1366) * 0.8);
+  height: calc(calc(100vw * 29 / 1366) * 0.8);
+  margin-left: calc(calc(100vw * 6 / 1366) * 0.8);
+  border-radius: 50%;
+  font-size: calc(calc(100vw * 13.5 / 1366) * 0.8);
+  background-color: #d8d8d8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#clear-viewed-optics {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: calc(100vw * 40 / 1366);
+  position: relative;
+  font-size: calc(100vw * 15 / 1366);
+  width: calc(100vw * 270 / 1366);
+  height: calc(100vw * 50 / 1366);
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: calc(100vw * 12 / 1366);
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#clear-viewed-optics:hover {
+  background-color: #e9ecef;
+  box-shadow: none;
+}
+
+#clear-viewed-optics:active {
+  background-color: #d8d8d8;
+  box-shadow: none;
+}

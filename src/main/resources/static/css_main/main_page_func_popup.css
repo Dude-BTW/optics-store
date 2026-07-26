@@ -1,0 +1,613 @@
+/* Main Page Functionality Modal Layouts: Defines interactive elements, authorization constraints, and feedback states inside the central UI modals. */
+
+/* Popup Add Filter */
+
+.filter-none-display {
+  display: none;
+}
+
+/* Popup Add Rating */
+
+/* Reusable main-action button styling for Auth and Rating submissions with specific active/hover color boundaries. */
+.popup-register-login-button,
+#popup-report-avail-button,
+#popup-rating-button {
+  font-size: calc(100vw * 13 / 1366);
+  width: 100%;
+  height: calc(100vw * 50 / 1366);
+  margin-bottom: calc(100vw * -2 / 1366);
+  background-color: transparent;
+  border-radius: calc(100vw * 10 / 1366);
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#popup-rating-button:hover,
+#popup-rating-button:active,
+.popup-register-login-button:hover,
+.popup-register-login-button:active,
+#popup-report-avail-button:hover,
+#popup-report-avail-button:active {
+  color: white;
+  box-shadow: none;
+}
+
+#popup-rating-button {
+  margin-top: calc(100vw * 16 / 1366);
+  color: #9c3139;
+  border: calc(100vw * 1 / 1366) solid #9c3139;
+}
+
+#popup-rating-button:hover {
+  background-color: #ef233c;
+  border: calc(100vw * 1 / 1366) solid #ef233c;
+}
+
+#popup-rating-button:active {
+  background-color: #be303b;
+  border: calc(100vw * 1 / 1366) solid #be303b;
+}
+
+/* Reusable main-action button styling for Auth and Rating submissions with specific active/hover color boundaries. */
+.popup-register-login-button,
+#popup-report-avail-button {
+  margin-top: calc(100vw * 0 / 1366);
+  color: #383332;
+  border: calc(100vw * 1 / 1366) solid #383332;
+}
+
+.popup-register-login-button:hover,
+#popup-report-avail-button:hover {
+  background-color: #5a5250;
+  border: calc(100vw * 1 / 1366) solid #5a5250;
+}
+
+.popup-register-login-button:active,
+#popup-report-avail-button:active {
+  background-color: #383332;
+  border: calc(100vw * 1 / 1366) solid #383332;
+}
+
+.enter-register-popup-container,
+.enter-login-popup-container,
+.enter-report-Availability-popup-container,
+.enter-rat-strProdct-popup-container {
+  padding-bottom: calc(100vw * 19 / 1366);
+  margin-left: calc(100vw * 29 / 1366);
+  margin-right: calc(100vw * 32 / 1366);
+}
+
+.enter-registerLogin-popup-container,
+.enter-reportAvail-popup-container,
+.enter-ratStrPrdct-popup-container {
+  position: relative;
+}
+
+.enter-registerLogin-popup-CONT-input,
+.enter-reportAvail-popup-CONT-input,
+.enter-ratStrPrdct-popup-CONT-input {
+  position: relative;
+  border-bottom: calc(100vw * 1 / 1366) solid #736f6e;
+  transition:
+    border-bottom 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.enter-register-login-popup-input,
+.enter-report-avail-popup-input,
+.enter-ratStrPrdct-popup-input {
+  all: unset;
+  width: 100%;
+  padding-left: calc(100vw * 17 / 1366);
+  padding-top: calc(100vw * 5 / 1366);
+  padding-bottom: calc(100vw * 9 / 1366);
+  font-size: calc(100vw * 14 / 1366);
+  box-sizing: border-box;
+  padding-right: calc(100vw * 25 / 1366);
+}
+
+.required-popup-field {
+  font-size: calc(100vw * 11 / 1366);
+  color: #be303b;
+  margin-top: calc(100vw * 1 / 1366);
+  margin-bottom: calc(100vw * 9 / 1366);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  pointer-events: none;
+}
+
+/* Contextual tooltips bound to specific inputs, indicating mandatory fields dynamically via opacity/visibility transitions. */
+.enter-required-popup-field,
+.enter-required-popup-field-textarea {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: auto;
+  width: auto;
+  border-radius: calc(100vw * 5 / 1366);
+  border-left: calc(100vw * 6 / 1366) solid #be303b;
+  font-size: calc(100vw * 14 / 1366);
+  background-color: #f0f2f4;
+  color: #383332;
+  padding-left: calc(100vw * 11 / 1366);
+  padding-right: calc(100vw * 9 / 1366);
+  padding-top: calc(100vw * 5 / 1366);
+  padding-bottom: calc(100vw * 5 / 1366);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  user-select: none;
+  -webkit-user-drag: none;
+  z-index: 2;
+}
+
+.enter-required-popup-field {
+  bottom: calc(100vw * 22 / 1366);
+  left: calc(100vw * 0 / 1366);
+}
+
+.enter-required-popup-field-textarea {
+  top: calc(100vw * 5 / 1366);
+  left: calc(100vw * 1 / 1366);
+  margin-right: calc(100vw * 1 / 1366);
+}
+
+.enter-ratStrPrdct-popup-message-container {
+  font-size: calc(100vw * 14 / 1366);
+  height: calc(100vw * 139 / 1366);
+  width: 100%;
+  border-radius: calc(100vw * 2 / 1366);
+  border: calc(100vw * 1 / 1366) solid #736f6e;
+}
+
+.enter-ratStrPrdct-popup-message {
+  all: unset;
+  font-size: calc(100vw * 14 / 1366);
+  height: calc(100% - calc(100vw * 9 / 1366));
+  width: calc(100% - (calc(100vw * 17 / 1366) * 2));
+  padding-left: calc(100vw * 17 / 1366);
+  padding-right: calc(100vw * 17 / 1366);
+  padding-top: calc(100vw * 9 / 1366);
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.enter-ratStrPrdct-popup-message::-webkit-scrollbar {
+  width: calc(100vw * 4 / 1366);
+}
+
+.enter-ratStrPrdct-popup-message::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.enter-ratStrPrdct-popup-message::-webkit-scrollbar-track-piece {
+  margin-top: calc(100vw * 1 / 1366);
+  margin-bottom: calc(100vw * 1 / 1366);
+  background: #f8f9fa;
+  border-radius: calc(100vw * 5 / 1366);
+}
+
+.enter-ratStrPrdct-popup-message::-webkit-scrollbar-thumb {
+  background-color: #383332;
+  border-radius: calc(100vw * 5 / 1366);
+}
+
+/* Clear CONT Popup Button */
+
+.clear-button-popup {
+  width: calc(100vw * 19.5 / 1366);
+  height: calc(100vw * 35 / 1366);
+  bottom: calc(100vw * 18.5 / 1366);
+  right: 0;
+  opacity: 0;
+  border: none;
+  border-radius: calc(100vw * 0 / 1366);
+  background-color: transparent;
+  box-shadow: none !important;
+  outline: none !important;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.clear-icon-popup {
+  width: calc(100vw * 19.5 / 1366);
+  height: auto;
+}
+
+.enter-ratStrPrdct-popup-CONT-input .enter-ratStrPrdct-popup-input,
+.enter-registerLogin-popup-CONT-input .enter-register-login-popup-input,
+.enter-reportAvail-popup-CONT-input .enter-report-avail-popup-input {
+  position: relative;
+  z-index: 2;
+}
+.enter-ratStrPrdct-popup-CONT-input .clear-button-popup,
+.enter-registerLogin-popup-CONT-input .clear-button-popup,
+.enter-reportAvail-popup-CONT-input .clear-button-popup {
+  z-index: 1;
+  pointer-events: none;
+}
+
+.enter-ratStrPrdct-popup-CONT-input:focus-within .enter-ratStrPrdct-popup-input,
+.enter-registerLogin-popup-CONT-input:focus-within
+  .enter-register-login-popup-input,
+.enter-reportAvail-popup-CONT-input:focus-within
+  .enter-report-avail-popup-input {
+  z-index: 0;
+}
+.enter-ratStrPrdct-popup-CONT-input:focus-within .clear-button-popup,
+.enter-registerLogin-popup-CONT-input:focus-within .clear-button-popup,
+.enter-reportAvail-popup-CONT-input:focus-within .clear-button-popup {
+  z-index: 3;
+  pointer-events: auto;
+}
+
+.mainContainerEnterPopup {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin-top: calc(100vw * -9 / 1366);
+}
+
+.mainContainerEnterPopup .mainSkillsEnterPopup {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.mainContainerEnterPopup .mainSkillsEnterPopup .mainSkillsEnterPopup {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.mainContainerEnterPopup .mainSkillsEnterPopup .mainSkillsEnterPopup input {
+  display: none;
+}
+
+.mainContainerEnterPopup .mainSkillsEnterPopup .mainSkillsEnterPopup label {
+  width: calc(100vw * 9 / 1366);
+  height: calc(100vw * 30 / 1366);
+  font-size: calc(100vw * 19 / 1366);
+  font-family: FontAwesome;
+  position: relative;
+  color: #d8d8d8;
+  cursor: pointer;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.mainContainerEnterPopup
+  .mainSkillsEnterPopup
+  .mainSkillsEnterPopup
+  label:nth-of-type(1),
+.mainContainerEnterPopup
+  .mainSkillsEnterPopup
+  .mainSkillsEnterPopup
+  label:nth-of-type(3),
+.mainContainerEnterPopup
+  .mainSkillsEnterPopup
+  .mainSkillsEnterPopup
+  label:nth-of-type(5),
+.mainContainerEnterPopup
+  .mainSkillsEnterPopup
+  .mainSkillsEnterPopup
+  label:nth-of-type(7),
+.mainContainerEnterPopup
+  .mainSkillsEnterPopup
+  .mainSkillsEnterPopup
+  label:nth-of-type(9) {
+  transform: scaleX(-1);
+  margin-right: calc(100vw * 2 / 1366);
+}
+
+.mainContainerEnterPopup
+  .mainSkillsEnterPopup
+  .mainSkillsEnterPopup
+  label::before {
+  content: "\f005";
+  font-family: FontAwesome;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #d8d8d8;
+  width: 100%;
+  height: 100%;
+  transition: color 0.3s;
+}
+
+.mainContainerEnterPopup
+  .mainSkillsEnterPopup
+  .mainSkillsEnterPopup
+  label:hover::before,
+.mainContainerEnterPopup
+  .mainSkillsEnterPopup
+  .mainSkillsEnterPopup
+  label:hover
+  ~ label::before {
+  color: orange;
+}
+
+.mainContainerEnterPopup
+  .mainSkillsEnterPopup
+  .mainSkillsEnterPopup
+  input:checked
+  ~ label::before {
+  color: orange;
+}
+
+/* Check Familiar Rules */
+
+/* Custom interactive checkboxes for rules acknowledgment, replacing default HTML inputs with styled DOM elements. */
+.check-familiar-rules-custom {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: calc(100vw * -1 / 1366);
+  margin-bottom: calc(100vw * 2 / 1366);
+}
+
+.check-familiar-rules-square {
+  width: calc(100vw * 15 / 1366);
+  height: calc(100vw * 15 / 1366);
+  border-radius: calc(100vw * 3 / 1366);
+  border: calc(100vw * 1 / 1366) solid #be303b;
+  margin-right: calc(100vw * 14 / 1366);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.1s ease;
+  position: relative;
+}
+
+.check-familiar-rules-title {
+  font-size: calc(100vw * 15 / 1366);
+  margin-top: calc(100vw * 1 / 1366);
+}
+
+.check-familiar-rules-square.active {
+  background-color: #be303b;
+}
+
+.check-familiar-rules-square img {
+  display: none;
+  transition: opacity 0.1s ease;
+}
+
+.check-familiar-rules-square.active img {
+  display: inline-block;
+  width: calc(100vw * 13 / 1366);
+  height: calc(100vw * 13 / 1366);
+}
+
+.enter-quean-container {
+  position: relative;
+}
+
+/* Loading Text Popup */
+
+.loading-text-popup {
+  font-size: calc(100vw * 20 / 1366);
+  font-weight: bold;
+  color: #383332;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  display: block;
+  width: 100%;
+  white-space: normal !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  text-align: center;
+  margin-left: calc(100vw * 49 / 1366);
+  margin-right: calc(100vw * 52 / 1366);
+}
+
+.loading-text-popup.show {
+  opacity: 1;
+}
+
+.loading-text-popup .dot {
+  animation: dot-blink 1s infinite ease;
+  animation-fill-mode: both;
+}
+
+.loading-text-popup .dot:nth-child(1) {
+  animation-delay: -0.4s;
+}
+
+.loading-text-popup .dot:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.loading-text-popup .dot:nth-child(3) {
+  animation-delay: 0s;
+}
+
+@keyframes dot-blink {
+  0%,
+  20% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Popup Add Rating */
+
+.container-popup-main-top_1,
+.container-popup-main-top_2,
+.container-popup-main-top_3,
+.container-popup-main-top_4 {
+  padding-top: calc(100vw * 32 / 1366);
+  padding-bottom: calc(100vw * 3 / 1366);
+  margin-left: calc(100vw * 29 / 1366);
+  margin-right: calc(100vw * 32 / 1366);
+}
+
+.p-popup-main-top_1,
+.p-popup-main-top_2,
+.p-popup-main-top_3,
+.p-popup-main-top_4 {
+  font-size: calc(100vw * 14 / 1366);
+}
+
+/* ITI */
+
+.iti__country {
+  color: #383332;
+  background-color: white;
+  padding: calc(100vw * 8 / 1366) calc(100vw * 12 / 1366);
+  height: calc(100vw * 40 / 1366);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: calc(100vw * 13 / 1366);
+}
+
+.iti__country:hover {
+  background-color: #e9ecef;
+  color: #e6746d;
+}
+
+.iti {
+  width: calc(100% - (100vw * 25 / 1366));
+  display: block;
+  border: none;
+  border-radius: 0;
+}
+
+.iti input[type="text"] {
+  margin-left: calc(100vw * -1 / 1366);
+  all: unset;
+  width: calc(100% - (100vw * 17 / 1366));
+  padding-left: calc(100vw * 17 / 1366);
+  padding-top: calc(100vw * 5 / 1366);
+  padding-bottom: calc(100vw * 9 / 1366);
+  font-size: calc(100vw * 14 / 1366);
+}
+
+.iti__flag,
+.iti__arrow {
+  transform: translateY(calc(100vw * -1 / 1366));
+}
+
+/* Iti Country List */
+
+.iti__country-list::-webkit-scrollbar {
+  width: calc(100vw * 4 / 1366);
+}
+
+.iti__country-list::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: calc(100vw * 5 / 1366);
+}
+
+.iti__country-list::-webkit-scrollbar-thumb {
+  background-color: #383332;
+  border-radius: calc(100vw * 5 / 1366);
+}
+
+.dropdown-animation-capha {
+  overflow: hidden;
+  transform-origin: top center;
+  transition:
+    height 0.4s ease,
+    opacity 0.4s ease;
+  height: 0;
+  opacity: 0;
+}
+
+.popup-global-recap-rat .g-recaptcha,
+.popup-recap-rat .g-recaptcha {
+  display: block;
+  width: 304px;
+  margin: 0 auto;
+}
+
+/* Edit Feedback */
+
+.clone-card-container {
+  flex-direction: column;
+  background-color: #fdfdfd;
+  border: calc(100vw * 1 / 1366) solid #383332;
+  opacity: 0;
+  padding: calc(100vw * 15 / 1366);
+  transition: opacity 300ms ease;
+  border-radius: calc(100vw * 5 / 1366);
+}
+
+.clone-card-container.show {
+  opacity: 1;
+}
+
+.feedback-actions {
+  display: flex;
+  align-items: center;
+  gap: calc(100vw * 15 / 1366);
+}
+
+.feedback-question-answer .feedback-actions {
+  margin-top: calc(100vw * 10 / 1366);
+}
+
+.edit-feedback,
+.delete-feedback {
+  all: unset;
+  background-color: none;
+  width: calc(100vw * 22 / 1366);
+  height: calc(100vw * 22 / 1366);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(100vw * 5 / 1366);
+}
+
+.edit-feedback {
+  margin-left: auto;
+}
+
+.delete-feedback {
+  margin-right: calc(100vw * 5 / 1366);
+}
+
+.edit-feedback img,
+.delete-feedback img {
+  width: calc(100vw * 22 / 1366);
+  height: calc(100vw * 22 / 1366);
+}
+
+.edit-feedback:hover img[alt="Edit Feedback"] {
+  content: url("/images/System_Interface/feedback_control/edit/edit_fill.svg");
+}
+
+.delete-feedback:hover img[alt="Delete Feedback"] {
+  content: url("/images/System_Interface/feedback_control/delete/delete_fill.svg");
+}

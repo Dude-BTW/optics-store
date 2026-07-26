@@ -1,0 +1,321 @@
+/* Product Review Form: Styles for the review creation modal, including client-side validation tooltips and text formatting layouts. */
+
+/* Main Rating Products */
+
+.rating-starProduct-container {
+  margin-bottom: 1.4%;
+}
+
+.rating-starProduct {
+  position: relative;
+  border-radius: calc(100vw * 5 / 1366);
+  background-color: #f8faf9;
+  height: calc(100vw * 50 / 1366);
+  margin-top: calc(100vw * 0 / 1366);
+  cursor: pointer;
+  transition:
+    border-bottom-left-radius 0.1s ease,
+    border-bottom-right-radius 0.1s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.rating-starProduct.rating-starProductHover {
+  background-color: #e9ecef;
+}
+
+.rating-starProduct.rating-starProductActive {
+  background-color: #d8d8d8;
+}
+
+/* Close Rating Products */
+
+.close-rating-starProduct-button {
+  width: calc(100vw * 50 / 1366);
+  height: calc(100vw * 50 / 1366);
+  top: calc(100vw * 0 / 1366);
+  right: 0;
+  border: none;
+  border-radius: calc(100vw * 5 / 1366);
+  border-top-left-radius: calc(100vw * 0 / 1366);
+  border-bottom-left-radius: calc(100vw * 0 / 1366);
+  background-color: #ef233c;
+  box-shadow: none;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    border-bottom-right-radius 0.1s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.close-ra-sta-buttonHover {
+  background-color: #be303b;
+  box-shadow: none;
+}
+
+.close-ra-sta-buttonActive {
+  background-color: #9c3139;
+  box-shadow: none;
+}
+
+.close-rating-starProduct-p {
+  position: absolute;
+  top: calc(100vw * 10 / 1366);
+  left: calc(100vw * 10 / 1366);
+  cursor: pointer;
+  font-weight: 700;
+  color: #383332;
+  font-size: calc(100vw * 14 / 1366);
+  margin-left: calc(100vw * 18 / 1366);
+  margin-top: calc(100vw * 5 / 1366);
+}
+
+.close-rating-starProduct-p.close-ra-sta-pHover {
+  color: #5a5250;
+}
+
+.close-rating-starProduct-p.close-ra-sta-pActive {
+  color: #383332;
+}
+
+/* Body Rating Products */
+
+.ratStarPrdctFeed-feedback-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.enter-rat-strProdct-container {
+  padding-bottom: calc(100vw * 19 / 1366);
+  margin-left: 20.8%;
+  margin-right: 23.3%;
+}
+
+.enter-ratStrPrdct-CONT-input {
+  position: relative;
+  border-bottom: calc(100vw * 1 / 1366) solid #736f6e;
+  transition:
+    border-bottom 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.enter-ratStrPrdct-input {
+  all: unset;
+  width: 100%;
+  padding-left: calc(100vw * 17 / 1366);
+  padding-top: calc(100vw * 5 / 1366);
+  padding-bottom: calc(100vw * 9 / 1366);
+  font-size: calc(100vw * 14 / 1366);
+  box-sizing: border-box;
+  padding-right: calc(100vw * 25 / 1366);
+}
+
+.enter-ratStrPrdct-message-disadvan-container,
+.enter-ratStrPrdct-message-advan-container,
+.enter-ratStrPrdct-message-container {
+  font-size: calc(100vw * 14 / 1366);
+  height: calc(100vw * 139 / 1366);
+  width: 100%;
+  border-radius: calc(100vw * 2 / 1366);
+  border: calc(100vw * 1 / 1366) solid #736f6e;
+}
+
+.enter-ratStrPrdct-message-disadvan,
+.enter-ratStrPrdct-message-advan,
+.enter-ratStrPrdct-message {
+  all: unset;
+  font-size: calc(100vw * 14 / 1366);
+  height: calc(100% - calc(100vw * 9 / 1366));
+  width: calc(100% - (calc(100vw * 17 / 1366) * 2));
+  padding-left: calc(100vw * 17 / 1366);
+  padding-right: calc(100vw * 17 / 1366);
+  padding-top: calc(100vw * 9 / 1366);
+  overflow-x: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.enter-ratStrPrdct-message-disadvan::-webkit-scrollbar,
+.enter-ratStrPrdct-message-advan::-webkit-scrollbar,
+.enter-ratStrPrdct-message::-webkit-scrollbar {
+  width: calc(100vw * 4 / 1366);
+}
+
+.enter-ratStrPrdct-message-disadvan::-webkit-scrollbar-track,
+.enter-ratStrPrdct-message-advan::-webkit-scrollbar-track,
+.enter-ratStrPrdct-message::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: calc(100vw * 5 / 1366);
+}
+
+.enter-ratStrPrdct-message-disadvan::-webkit-scrollbar-thumb,
+.enter-ratStrPrdct-message-advan::-webkit-scrollbar-thumb,
+.enter-ratStrPrdct-message::-webkit-scrollbar-thumb {
+  background-color: #383332;
+  border-radius: calc(100vw * 5 / 1366);
+}
+
+.enter-rat-strProdct-dropdown {
+  contain: layout paint style;
+  isolation: isolate;
+  overflow: hidden;
+  will-change: height;
+  height: 0;
+  visibility: hidden;
+  pointer-events: none;
+  background-color: #f8faf9;
+  border-radius: calc(100vw * 5 / 1366);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.enter-rat-strProdct-dropdown.visible {
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.enter-rat-strProdct-dropdown .reveal-mask {
+  backface-visibility: hidden;
+  will-change: transform;
+  transform: translateZ(0) scaleY(1);
+}
+
+.enter-rat-strProdct-dropdown .reveal-mask::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 16px;
+  background: linear-gradient(
+    to top,
+    rgba(248, 250, 249, 1),
+    rgba(248, 250, 249, 0)
+  );
+  pointer-events: none;
+}
+
+.enter-rat-strProdct-dropdown.visible .reveal-mask {
+  transform: scaleY(0);
+  transition-duration: 0.4s;
+}
+
+.enter-rat-strProdct-dropdown.closing .reveal-mask {
+  transform: scaleY(1);
+  transition-duration: 0.2s;
+}
+
+/* Check Familiar Rules Rating Products */
+
+.enter-ratStrPrdct-advan-disadvan-container,
+.enter-ratStrPrdct-message-advan-container,
+.enter-ratStrPrdct-message-disadvan-container,
+.enter-ratStrPrdct-container {
+  position: relative;
+}
+
+.enter-ratStrPrdct-advan-disadvan-container {
+  display: flex;
+  gap: calc(100vw * 15 / 1366);
+  margin-top: calc(100vw * 15 / 1366);
+}
+
+/* Client-Side Validation Tooltips: Dynamically displayed error messages preventing submission of invalid form data. */
+.enter-required-field,
+/* Client-Side Validation Tooltips: Dynamically displayed error messages preventing submission of invalid form data. */
+.enter-required-field-textarea-advan,
+/* Client-Side Validation Tooltips: Dynamically displayed error messages preventing submission of invalid form data. */
+.enter-required-field-textarea-disadvan,
+/* Client-Side Validation Tooltips: Dynamically displayed error messages preventing submission of invalid form data. */
+.enter-required-field-textarea {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: auto;
+  width: auto;
+  border-radius: calc(100vw * 5 / 1366);
+  border-left: calc(100vw * 6 / 1366) solid #be303b;
+  font-size: calc(100vw * 14 / 1366);
+  background-color: #f0f2f4;
+  color: #383332;
+  padding-left: calc(100vw * 11 / 1366);
+  padding-right: calc(100vw * 9 / 1366);
+  padding-top: calc(100vw * 5 / 1366);
+  padding-bottom: calc(100vw * 5 / 1366);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+  user-select: none;
+  -webkit-user-drag: none;
+  z-index: 2;
+}
+
+/* Client-Side Validation Tooltips: Dynamically displayed error messages preventing submission of invalid form data. */
+.enter-required-field {
+  bottom: calc(100vw * 22 / 1366);
+  left: calc(100vw * 0 / 1366);
+}
+
+/* Client-Side Validation Tooltips: Dynamically displayed error messages preventing submission of invalid form data. */
+.enter-required-field-textarea-advan,
+/* Client-Side Validation Tooltips: Dynamically displayed error messages preventing submission of invalid form data. */
+.enter-required-field-textarea-disadvan,
+/* Client-Side Validation Tooltips: Dynamically displayed error messages preventing submission of invalid form data. */
+.enter-required-field-textarea {
+  top: calc(100vw * 5 / 1366);
+  left: calc(100vw * 0 / 1366);
+}
+
+/* Rating Star Prdct */
+
+.rating-starPrdct-feedback .card,
+.rating-starPrdct-feedbackTOP .card,
+.rating-starPrdct-feedbackAdmin .card {
+  border-radius: 0%;
+  border: calc(100vw * 0 / 1366);
+}
+
+.rating-starPrdct-feedbackTOP .card {
+  position: relative;
+}
+
+.rating-starPrdct-feedbackAdmin .card::before,
+.rating-starPrdct-feedbackTOP .card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  padding-inline: 1px;
+  background-clip: content-box;
+  background-repeat: repeat-x;
+  background-size: 5px 1px;
+  pointer-events: none;
+}
+
+.rating-starPrdct-feedbackAdmin .card::before,
+.rating-starPrdct-feedbackTOP .card::before {
+  top: 0;
+  background-position: left top;
+}
+
+.rating-starPrdct-feedbackAdmin .card::before,
+.rating-starPrdct-feedbackTOP .card::before {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #d8d8d8 0 3px,
+    transparent 3px 5px
+  );
+}

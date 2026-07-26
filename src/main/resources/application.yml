@@ -1,0 +1,80 @@
+spring:
+  application:
+    name: optics
+  cloud:
+    vault:
+      uri: http://127.0.0.1:8200
+  datasource:
+    url: jdbc:mariadb://localhost:3306/optics_store?useSSL=false&allowPublicKeyRetrieval=true
+    username: andrii
+    password: Yakuza_PS2_true_goat
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      auto-commit: true
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: create
+  freemarker:
+    settings:
+      "[incompatible_improvements]": 2.3.34
+    suffix: .ftl
+  devtools:
+    restart:
+      enabled: false
+  security:
+    user:
+      name: guest
+      password: guest
+      roles: GUEST
+  config:
+    import:
+      - optional:classpath:rate-limits.yml
+      - optional:classpath:excel-mappings.yml
+      - vault://
+
+server:
+  port: 8080
+  address: 0.0.0.0
+  servlet:
+    session:
+      persistent: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    metrics:
+      access: UNRESTRICTED
+    prometheus:
+      access: UNRESTRICTED
+  metrics:
+    enable:
+      cache: true
+
+rate-limiter:
+  blockTtlMinutes: 15
+  defaultMinInterval: 1s
+  aggressiveBlockMinutes: 60
+  permanentAfterAggressiveCount: 5
+  permanentAggressiveWindow: 7d
+  purgePermanentAfterMonths: 12
+  recentMultiplier: 3
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS}  %highlight(%-5level) [%thread] %-36.36logger : %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS}  %highlight(%-5level) [%thread] %-36.36logger : %msg%n"
+  file:
+    name: logs/app.log
+  level:
+    root: info
+    "[com.optics_store]": debug
+    "[org.springframework]": info
+    "[org.hibernate]": warn

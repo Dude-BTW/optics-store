@@ -1,0 +1,379 @@
+/* Cart & Favorites Management: Structural styles for grouped lists, including the shopping cart rows with price calculations and the user favorites grid. */
+
+/* Optics Grouped */
+
+.optics-grouped-title {
+  margin-left: 2.2%;
+  margin-top: calc(100vw * 40 / 1366);
+  padding-left: calc(100vw * 0 / 1366);
+  padding-bottom: calc(100vw * 11.5 / 1366);
+  font-size: calc(100vw * 34 / 1366);
+  display: inline-flex;
+  border-bottom: 3.5px solid #be303b;
+}
+
+.optics-grouped-row {
+  margin-top: calc(100vw * -10 / 1366);
+  margin-bottom: calc(100vw * 42 / 1366);
+  margin-left: 1.4%;
+  width: 91.15%;
+}
+
+.optics-grouped-row .card {
+  position: relative;
+  border: 1px solid transparent;
+}
+
+.optics-grouped-row .col:nth-child(n + 5) {
+  margin-top: calc(100vw * 43 / 1366);
+}
+
+.optics-grouped-name {
+  margin: 0;
+  font-weight: 600;
+  font-size: calc(100vw * 16 / 1366);
+}
+
+.optics-grouped-description {
+  margin: 0;
+  margin-top: calc(100vw * 5 / 1366);
+  font-size: calc(100vw * 13 / 1366);
+}
+
+/* Switching Pages */
+
+.switching-pages-cart,
+.switching-pages {
+  display: flex;
+  margin-top: calc(100vw * 8 / 1366);
+  gap: calc(100vw * 7 / 1366);
+  height: calc(100vw * 25 / 1366);
+}
+
+.switching-pages {
+  margin-left: 2.6%;
+}
+
+.switching-pages-cart {
+  margin-left: 5%;
+}
+
+.p-none-a,
+.hyphen {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: calc(100vw * 10.5 / 1366);
+  color: #383332;
+}
+
+.p-none-ap {
+  font-size: calc(100vw * 10.5 / 1366);
+}
+
+.p-none-a {
+  opacity: 0.6;
+}
+
+.hyphen {
+  font-size: calc(100vw * 8 / 1366);
+  font-weight: bold;
+  padding-top: calc(100vw * 1 / 1366);
+  pointer-events: none;
+}
+
+.switching-pages-button {
+  all: unset;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#home-page-button {
+  margin-left: calc(100vw * 7.5 / 1366);
+}
+
+.switching-pages-icon {
+  width: calc(100vw * 11 / 1366);
+  height: auto;
+  padding-bottom: calc(100vw * 1 / 1366);
+}
+
+#home-page-button .switching-pages-icon {
+  width: calc(100vw * 12 / 1366);
+  padding-bottom: calc(100vw * 2 / 1366);
+}
+
+.switching-pages-button:hover .switching-pages-icon[alt="Home Page"] {
+  content: url("/images/System_Interface/feedback_control/home_page/home_page_red.svg");
+}
+
+.switching-pages-button:hover .switching-pages-icon[alt="Category Page"] {
+  content: url("/images/System_Interface/feedback_control/category_page/category_page_red.svg");
+}
+
+/* Optics Favorites */
+
+.optics-favorites-title {
+  margin-left: 2.2%;
+  margin-top: calc(100vw * 27 / 1366);
+  padding-left: calc(100vw * 0 / 1366);
+  padding-bottom: calc(100vw * 7 / 1366);
+  font-size: calc(100vw * 26 / 1366);
+  font-weight: 800;
+  display: inline-flex;
+}
+
+.all-optics-favorites {
+  width: 97.2%;
+  margin-left: 1.45%;
+  margin-bottom: calc(100vw * 40 / 1366);
+}
+
+.all-optics-favorites .card {
+  border-radius: calc(100vw * 10 / 1366);
+}
+
+.fade-out-favorites {
+  animation: fadeOutFavorites 0.5s forwards;
+}
+
+@keyframes fadeOutFavorites {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+/* Optics Cart */
+
+.main-cart-row-container {
+  width: 97.2%;
+  margin-left: 4%;
+  margin-top: calc(100vw * 1.5 / 1366);
+  margin-bottom: calc(100vw * 40 / 1366);
+}
+
+.main-cart-row-container .card {
+  border-radius: calc(100vw * 10 / 1366);
+}
+
+/* Cart Items: Layout for individual products in the cart modal, incorporating quantity modifiers and delete action buttons. */
+.main-cart-row {
+  margin-left: 1.4%;
+  margin-right: 1.45%;
+  margin-top: calc(100vw * -14.5 / 1366);
+}
+
+.main-cart-row .col {
+  margin: 0;
+  height: calc(100vw * 110 / 1366);
+}
+
+.main-cart-row .card {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  border-radius: 0;
+  border: none;
+  border-bottom: calc(100vw * 1 / 1366) solid #dfdfdf;
+  justify-content: space-between;
+}
+
+.main-cart-row .col:last-child .card {
+  border-bottom: none;
+}
+
+.optics-main-cart-title {
+  margin-left: 2.7%;
+  margin-right: 2.75%;
+  margin-top: 2.75%;
+  padding: calc(100vw * 0 / 1366);
+  font-size: calc(100vw * 34 / 1366);
+  display: inline-flex;
+}
+
+.price-sum-main-cart {
+  margin-left: 6.2%;
+  margin-right: 6.25%;
+  margin-top: 6.25%;
+  padding: calc(100vw * 0 / 1366);
+  font-size: calc(100vw * 15 / 1366);
+  display: inline-flex;
+}
+
+.price-main-cart-container {
+  position: relative;
+  align-items: center;
+  border-radius: calc(100vw * 10 / 1366);
+  display: inline-flex;
+  border: calc(100vw * 1 / 1366) solid #383332;
+  transform: scale(1.01);
+}
+
+.cart-optic-img {
+  height: calc(100vw * 45 / 1366);
+  width: auto;
+  border-radius: calc(100vw * 5 / 1366);
+}
+
+.cart-optic-name {
+  display: inline-block;
+  font-size: calc(100vw * 15 / 1366);
+  margin-bottom: 0;
+}
+
+.cart-name-first-part {
+  white-space: nowrap;
+}
+
+.cart-price-text {
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: calc(100vw * 12 / 1366);
+  white-space: nowrap;
+}
+
+.cart-currency-text {
+  font-size: calc(100vw * 15 / 1366);
+  font-weight: bold;
+}
+
+#cart-price-sum {
+  margin-left: calc(100vw * 15 / 1366);
+}
+
+/* Product Quantity */
+
+.main-cart-productPlus-button,
+.main-cart-productQuantity-span,
+.main-cart-productMinus-button {
+  font-size: calc(100vw * 12 / 1366);
+  width: calc(100vw * 42 / 1366);
+  height: calc(100vw * 42 / 1366);
+  color: #383332;
+  border: none;
+  background-color: transparent;
+  border-radius: calc(100vw * 0 / 1366);
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.main-cart-productPlus-button {
+  border-top-right-radius: calc(100vw * 10 / 1366);
+  border-bottom-right-radius: calc(100vw * 10 / 1366);
+}
+
+.main-cart-productMinus-button {
+  border-top-left-radius: calc(100vw * 10 / 1366);
+  border-bottom-left-radius: calc(100vw * 10 / 1366);
+}
+
+.main-cart-productQuantity-input {
+  all: unset;
+  font-size: calc(100vw * 12 / 1366);
+  width: calc(100vw * 30 / 1366);
+  height: calc(100vw * 20 / 1366);
+  color: #383332;
+  text-align: center;
+}
+
+.main-cart-productPlus-button {
+  background-image: url("/images/System_Interface/plus/plus.svg");
+  background-size: calc(100vw * 15 / 1366) auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-cart-productMinus-button {
+  background-image: url("/images/System_Interface/minus/minus.svg");
+  background-size: calc(100vw * 15 / 1366) auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-cart-productPlus-button.hovered {
+  background-image: url("/images/System_Interface/plus/plus_red.svg");
+}
+
+.main-cart-productMinus-button.hovered {
+  background-image: url("/images/System_Interface/minus/minus_red.svg");
+}
+
+.main-cart-productPlus-button.clicked {
+  background-image: url("/images/System_Interface/plus/plus_red_click.svg");
+}
+
+.main-cart-productMinus-button.clicked {
+  background-image: url("/images/System_Interface/minus/minus_red_click.svg");
+}
+
+/* Delete Main Cart Button */
+
+.delete-main-cart-button {
+  width: calc(100vw * 43.5 / 1366);
+  height: calc(100vw * 43.5 / 1366);
+  top: calc(100vw * 1 / 1366);
+  background-color: #f8faf9;
+  border: none;
+  border-radius: calc(100vw * 5 / 1366);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  transform: scale(1.01);
+}
+
+.delete-main-cart-button:hover {
+  background-color: #e9ecef;
+}
+
+.delete-main-cart-button:active {
+  background-color: #d8d8d8;
+}
+
+/* Cart Order Button */
+
+#cart-order-button {
+  font-size: calc(100vw * 13 / 1366);
+  width: calc(100vw * 222 / 1366);
+  height: calc(100vw * 43.5 / 1366);
+  margin-top: 4.1%;
+  margin-left: 6.6%;
+  color: #9c3139;
+  border: calc(100vw * 1 / 1366) solid #9c3139;
+  background-color: transparent;
+  border-radius: calc(100vw * 10 / 1366);
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+  transform: scale(1.01);
+}
+
+#cart-order-button:hover {
+  color: white;
+  background-color: #ef233c;
+  box-shadow: none;
+  border: calc(100vw * 1 / 1366) solid #ef233c;
+}
+
+#cart-order-button:active {
+  color: white;
+  background-color: #be303b;
+  box-shadow: none;
+  border: calc(100vw * 1 / 1366) solid #be303b;
+}

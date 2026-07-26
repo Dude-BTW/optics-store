@@ -1,0 +1,75 @@
+excel:
+  mappings:
+    - simpleName: Optics
+      fileName: Table1
+      sheetIndex: 0
+
+    - simpleName: OpticsAddition
+      fileName: OpticsAddition
+      sheetIndex: 0
+
+    - simpleName: Client
+      fileName: Table2
+      sheetIndex: 0
+
+    - simpleName: User
+      fileName: Users
+      sheetIndex: 0
+
+    - simpleName: GuestQuest
+      fileName: Guest
+      sheetIndex: 0
+    - simpleName: GuestRating
+      fileName: Guest
+      sheetIndex: 1
+    - simpleName: GuestRatingGlob
+      fileName: Guest
+      sheetIndex: 2
+    - simpleName: GuestReport
+      fileName: Guest
+      sheetIndex: 3
+
+    - simpleName: Rating
+      fileName: RatingsLikesDislikesQuestions
+      sheetIndex: 0
+    - simpleName: LikeDislike
+      fileName: RatingsLikesDislikesQuestions
+      sheetIndex: 1
+    - simpleName: RatingGlobal
+      fileName: RatingsLikesDislikesQuestions
+      sheetIndex: 2
+    - simpleName: LikeDislikeGlobal
+      fileName: RatingsLikesDislikesQuestions
+      sheetIndex: 3
+    - simpleName: QuestionAnswer
+      fileName: RatingsLikesDislikesQuestions
+      sheetIndex: 4
+
+    - simpleName: SliderImages1
+      fileName: Table4
+      sheetIndex: 0
+    - simpleName: CardOptics1
+      fileName: Table4
+      sheetIndex: 1
+    - simpleName: CardOptics2
+      fileName: Table4
+      sheetIndex: 2
+    - simpleName: CardOptics3
+      fileName: Table4
+      sheetIndex: 3
+    - simpleName: CardNavbar1
+      fileName: Table4
+      sheetIndex: 4
+    - simpleName: CardNavbar2
+      fileName: Table4
+      sheetIndex: 5
+    - simpleName: CaruslCategory
+      fileName: Table4
+      sheetIndex: 6
+    - simpleName: CaruslGroup
+      fileName: Table4
+      sheetIndex: 7
+
+    - simpleName: Wrrryyyyyy
+      fileName: DIO
+      sheetIndex: 0

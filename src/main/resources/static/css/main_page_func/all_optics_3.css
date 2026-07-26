@@ -1,0 +1,140 @@
+/* Specialized Catalog Grid: Structural styles for specific product grid layouts and custom geometric UI stickers (discount/promotional markers). */
+
+.all-optics3 {
+  margin-left: 4%;
+  width: 92%;
+  margin-top: calc(100vw * 25 / 1366);
+  margin-bottom: calc(100vw * 40 / 1366);
+}
+
+.card_AllOptics3 {
+  border-radius: calc(100vw * 10 / 1366);
+  position: relative;
+}
+
+.custom-image-size_AllOptics3 {
+  width: 90%;
+  border-radius: calc(100vw * 10 / 1366);
+  height: auto;
+  margin-bottom: 0%;
+  margin-top: 5%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.card-title_AllOptics3 {
+  font-size: calc(100vw * 18.5 / 1366);
+  width: 100%;
+  font-weight: bold;
+  padding-bottom: 3%;
+}
+
+.custom-body_AllOptics3 {
+  font-size: calc(100vw * 15 / 1366);
+  margin-top: auto;
+  width: 100%;
+  padding-bottom: 7%;
+}
+
+.triangle-price-text {
+  position: absolute;
+  z-index: 2;
+  font-size: calc(100vw * 17.5 / 1366);
+  text-align: right;
+  color: #ffffff;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.triangle-currency-text {
+  font-size: calc(100vw * 22.5 / 1366);
+  font-weight: bold;
+}
+
+.triangle-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  --triangle-size: calc(100vw * 22 / 1366);
+  width: calc(100vw * 59 / 1366);
+}
+
+.triangle-top,
+.triangle-bottom {
+  z-index: 1;
+  position: relative;
+  background-color: #be303b;
+}
+
+.triangle-top:before,
+.triangle-top:after,
+.triangle-bottom:before,
+.triangle-bottom:after {
+  content: "";
+  position: absolute;
+  background-color: inherit;
+}
+
+.triangle-top,
+.triangle-top:before,
+.triangle-top:after,
+.triangle-bottom,
+.triangle-bottom:before,
+.triangle-bottom:after {
+  width: var(--triangle-size);
+  height: var(--triangle-size);
+  border-top-right-radius: calc(var(--triangle-size) / 3);
+}
+
+.triangle-bottom {
+  transform: rotate(90deg);
+}
+
+.triangle-top:before,
+.triangle-bottom:before {
+  transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707)
+    translate(0, -50%);
+}
+
+.triangle-top:after,
+.triangle-bottom:after {
+  transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
+}
+
+.triangle-square {
+  width: calc(var(--triangle-size) / 2);
+  height: calc(var(--triangle-size) / 2);
+  margin-right: calc(var(--triangle-size) * 0.7);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #be303b;
+  /* background-color: orange; */
+  z-index: 2;
+}
+
+.triangle-circle {
+  width: calc(var(--triangle-size) / 3.9);
+  height: calc(var(--triangle-size) / 3.9);
+  margin-right: calc(var(--triangle-size) * 1.38);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: white;
+  z-index: 2;
+}
+
+.square-right {
+  display: flex;
+  align-items: center;
+  width: calc(var(--triangle-size) * 6.4);
+  height: calc(var(--triangle-size) * 2);
+  margin-left: calc(var(--triangle-size) * (6.4 + 0.4));
+  border-top-right-radius: calc(var(--triangle-size) / 2);
+  border-bottom-right-radius: calc(var(--triangle-size) / 2);
+  background-color: #be303b;
+  position: absolute;
+  z-index: 2;
+}

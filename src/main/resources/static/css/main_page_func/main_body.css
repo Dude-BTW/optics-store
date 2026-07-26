@@ -1,0 +1,134 @@
+/* Home Page Navigation Components: Styling for horizontal product carousels (no-wrap-row) and their control buttons, utilizing flexbox for responsive content display. */
+
+.form-group.d-flex {
+  display: flex;
+  align-items: center;
+  margin-bottom: calc(100vw * 5 / 1366);
+}
+
+.form-group.d-flex .form-control,
+.form-group.d-flex label,
+.form-group.d-flex button {
+  margin-right: calc(100vw * 10 / 1366);
+}
+
+.image-list-container {
+  max-height: calc(100vw * 195 / 1366);
+  overflow-y: auto;
+  margin-bottom: calc(100vw * 15 / 1366);
+}
+
+.no-wrap-row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  width: 92%;
+}
+
+.no-wrap-row .col {
+  flex: 0 0 auto;
+}
+
+.no-wrap-row .card {
+  border-radius: calc(100vw * 10 / 1366);
+}
+
+.no-wrap-row-controls {
+  display: flex;
+  margin-bottom: calc(100vw * -75 / 1366);
+  margin-top: calc(100vw * 20 / 1366);
+  margin-left: 5%;
+  font-size: calc(100vw * 16.5 / 1366);
+}
+
+#noWrapRowPrev,
+#noWrapRowNext {
+  width: auto;
+  height: calc(100vw * 35 / 1366);
+  background-color: #f8f9fa;
+  border: none;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+#noWrapRowPrev:hover,
+#noWrapRowNext:hover {
+  background-color: #e9ecef;
+  box-shadow: none;
+}
+
+#noWrapRowPrev:active,
+#noWrapRowNext:active {
+  background-color: #d8d8d8;
+  box-shadow: none;
+}
+
+#noWrapRowPrev {
+  margin-right: calc(100vw * 10 / 1366);
+}
+
+.noWrapRowHidden {
+  position: absolute;
+  visibility: hidden;
+}
+
+.carousel-controls {
+  justify-content: flex-end;
+  display: flex;
+  margin-bottom: calc(100vw * 20 / 1366);
+  margin-top: calc(100vw * 40 / 1366);
+  margin-right: 5%;
+}
+
+.carousel-prev-1,
+.carousel-next-1,
+.carousel-prev-2,
+.carousel-next-2,
+.rightArrowNext {
+  width: calc(100vw * 35 / 1366);
+  height: calc(100vw * 35 / 1366);
+  border: none;
+  box-shadow: none !important;
+  outline: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.carousel-prev-1,
+.carousel-next-1,
+.carousel-prev-2,
+.carousel-next-2 {
+  background-color: #f8f9fa;
+}
+
+.carousel-prev-1:hover,
+.carousel-next-1:hover,
+.carousel-prev-2:hover,
+.carousel-next-2:hover {
+  background-color: #e9ecef;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.carousel-prev-1:active,
+.carousel-next-1:active,
+.carousel-prev-2:active,
+.carousel-next-2:active {
+  background-color: #d8d8d8;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.carousel-prev-1,
+.carousel-prev-2 {
+  margin-right: calc(100vw * 10 / 1366);
+}

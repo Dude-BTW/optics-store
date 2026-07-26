@@ -1,0 +1,269 @@
+/* Brand Catalog & Faceted Search: Styles for the dynamic filtering sidebar, responsive product grid, and animated sorting dropdowns. */
+
+.open-popup-filter1,
+.open-popup-filter2 {
+  margin-right: auto;
+  margin-left: 5.2%;
+  padding: calc(100vw * 10 / 1366) calc(100vw * 15 / 1366);
+  font-size: calc(100vw * 13 / 1366);
+  color: #383332;
+  width: auto;
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: calc(100vw * 5 / 1366);
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.open-popup-filter1:hover,
+.open-popup-filter2:hover {
+  background-color: #e9ecef;
+  box-shadow: none;
+}
+
+.open-popup-filter1:active,
+.open-popup-filter2:active {
+  background-color: #d8d8d8;
+  box-shadow: none;
+}
+
+.popup-filter1,
+.popup-filter2 {
+  font-size: calc(100vw * 14 / 1366);
+  color: #383332;
+}
+
+.popup-filter1-body,
+.popup-filter2-body {
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: calc(100vw * 416 / 1366);
+  margin-left: calc(100vw * -20 / 1366);
+  margin-top: calc(100vw * 20 / 1366);
+  max-height: calc(
+    calc(100vw * 500 / 1366) - calc(100vw * 51.5 / 1366) -
+      calc(100vw * 20 / 1366)
+  );
+}
+
+.popup-filter1-body::-webkit-scrollbar,
+.popup-filter2-body::-webkit-scrollbar {
+  width: calc(100vw * 4 / 1366);
+}
+
+.popup-filter1-body::-webkit-scrollbar-track,
+.popup-filter2-body::-webkit-scrollbar-track {
+  background: #f8f9fa;
+  border-radius: calc(100vw * 5 / 1366);
+}
+
+.popup-filter1-body::-webkit-scrollbar-thumb,
+.popup-filter2-body::-webkit-scrollbar-thumb {
+  background-color: #383332;
+  border-radius: calc(100vw * 5 / 1366);
+}
+
+.close {
+  height: calc(100vw * 51.5 / 1366);
+  width: calc(100vw * 418.5 / 1366);
+  background-color: #f8f9fa;
+  margin-top: calc(100vw * -20 / 1366);
+  margin-left: calc(100vw * -19 / 1366);
+  border-top-right-radius: calc(100vw * 5 / 1366);
+}
+
+.title-filter {
+  font-weight: 800;
+  top: calc(100vw * 1 / 1366);
+  width: auto;
+  height: calc(100vw * 51.5 / 1366);
+  padding-left: calc(100vw * 27 / 1366);
+  display: flex;
+  align-items: center;
+}
+
+#clear-filter-button-brand,
+#clear-filter-button-group {
+  width: auto;
+  height: calc(100vw * 50 / 1366);
+  padding: calc(100vw * 7 / 1366);
+  position: absolute;
+  cursor: pointer;
+  top: calc(100vw * 1 / 1366);
+  right: calc(100vw * 65 / 1366);
+  /* background-color: #a30bc2; */
+  background-color: #f8f9fa;
+  color: #be303b;
+  font-weight: 600;
+  border: none;
+  box-shadow:
+    calc(100vw * 0 / 1366) calc(100vw * -0.5 / 1366) calc(100vw * 0.5 / 1366)
+      #f8f9fa,
+    calc(100vw * 0 / 1366) calc(100vw * 0.5 / 1366) calc(100vw * 0.5 / 1366)
+      #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#clear-filter-button-brand:hover,
+#clear-filter-button-group:hover {
+  background-color: #be303b;
+  color: white;
+  box-shadow:
+    calc(100vw * 0 / 1366) calc(100vw * -0.5 / 1366) calc(100vw * 0.5 / 1366)
+      #be303b,
+    calc(100vw * 0 / 1366) calc(100vw * 0.5 / 1366) calc(100vw * 0.5 / 1366)
+      #be303b;
+}
+
+#clear-filter-button-brand:active,
+#clear-filter-button-group:active {
+  background-color: #ef233c;
+  color: white;
+  box-shadow:
+    calc(100vw * 0 / 1366) calc(100vw * -0.5 / 1366) calc(100vw * 0.5 / 1366)
+      #ef233c,
+    calc(100vw * 0 / 1366) calc(100vw * 0.5 / 1366) calc(100vw * 0.5 / 1366)
+      #ef233c;
+}
+
+.title-clnOptics {
+  font-size: calc(100vw * 23 / 1366);
+  font-weight: 800;
+  width: 90.2%;
+  color: #383332;
+  margin-left: 4.9%;
+  margin-top: calc(100vw * 27 / 1366);
+  margin-bottom: calc(100vw * 26 / 1366);
+  text-align: left;
+}
+
+.price-quantity-text {
+  font-size: calc(100vw * 13 / 1366);
+  color: #383332;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.priceVisual-text,
+.quantityVisual-text {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  margin-right: calc(100vw * 10 / 1366);
+}
+
+.drop-down-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: calc(100vw * 27 / 1366);
+  margin-right: calc(100vw * 25 / 1366);
+  padding: calc(100vw * 10 / 1366) calc(100vw * 0 / 1366);
+  cursor: pointer;
+  border-bottom: calc(100vw * 1 / 1366) solid #d8d8d8;
+}
+
+.drop-down-activator {
+  width: auto;
+  height: auto;
+  transition:
+    background-color 0.2s ease,
+    border-bottom 0.2s ease;
+}
+
+.drop-down-activator:hover {
+  background-color: #e9ecef;
+}
+
+.drop-down-area:hover {
+  border-bottom: calc(100vw * 1 / 1366) solid #e9ecef;
+}
+
+.drop-down-activator:active {
+  background-color: #d8d8d8;
+}
+
+.drop-down-activator .toggle-icon {
+  width: calc(100vw * 16 / 1366);
+  height: calc(100vw * 16 / 1366);
+  transition: transform 0.3s ease;
+}
+
+.drop-down-filter1,
+.drop-down-filter2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: calc(100vw * 0 / 1366);
+  margin-top: calc(100vw * 0 / 1366);
+  margin-left: calc(100vw * 20 / 1366);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease,
+    padding 0.3s ease,
+    margin 0.3s ease;
+}
+
+.drop-down-filter1.show,
+.drop-down-filter2.show {
+  max-height: calc(100vw * 300 / 1366);
+  opacity: 1;
+  padding-left: calc(100vw * 10 / 1366);
+  padding-right: calc(100vw * 10 / 1366);
+  margin-top: calc(100vw * 10 / 1366);
+  margin-bottom: calc(100vw * 12 / 1366);
+}
+
+/* Dynamic Filtering Parameters: Custom interactive checkboxes that trigger URL parameters update and asynchronous product grid regeneration. */
+.check-custom {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: calc(100vw * 17 / 1366);
+  margin-top: calc(100vw * 13 / 1366);
+}
+
+.check-square {
+  width: calc(100vw * 15 / 1366);
+  height: calc(100vw * 15 / 1366);
+  border-radius: calc(100vw * 3 / 1366);
+  border: calc(100vw * 1 / 1366) solid #be303b;
+  margin-right: calc(100vw * 17 / 1366);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.1s ease;
+  position: relative;
+}
+
+.check-title {
+  font-size: calc(100vw * 13 / 1366);
+}
+
+.check-square.active {
+  background-color: #be303b;
+}
+
+.check-square img {
+  display: none;
+}
+
+.check-square.active img {
+  display: inline-block;
+  width: calc(100vw * 13 / 1366);
+  height: calc(100vw * 13 / 1366);
+}

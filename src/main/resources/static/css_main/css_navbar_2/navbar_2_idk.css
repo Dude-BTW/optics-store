@@ -1,0 +1,141 @@
+/* Mega-Menu Container Logic: Handles the deployment, visibility, and internal layout of the expansive catalog navigation menus. */
+
+/* IDK */
+
+/* Hidden container for the mega-menu. Uses opacity and height transitions for smooth, JS-triggered deployment over the DOM tree. */
+.additional-navbar1,
+.additional-navbar2 {
+  background-color: white;
+  color: #383332;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: calc(100vw * 20 / 1366);
+  font-size: calc(100vw * 12 / 1366);
+  position: absolute;
+  top: calc(100vw * 59 / 1366);
+  z-index: 800;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition:
+    opacity 0.3s ease-in-out,
+    height 0.3s ease-in-out;
+  border-bottom: calc(100vw * 1 / 1366) solid #ddd;
+  box-shadow: calc(100vw * 0 / 1366) calc(100vw * 8 / 1366)
+    calc(100vw * 16 / 1366) calc(100vw * 0 / 1366) rgba(0, 0, 0, 0.2);
+}
+
+.additional-navbar1-table,
+.additional-navbar2-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-left: 2%;
+}
+
+.additional-navbar1-table th,
+.additional-navbar2-table th {
+  color: #383332;
+  padding-top: calc(100vw * 19 / 1366);
+  padding-bottom: calc(100vw * 0 / 1366);
+  text-align: left;
+  font-size: calc(100vw * 12 / 1366);
+  font-weight: bold;
+}
+
+.additional-navbar1-table td,
+.additional-navbar2-table td {
+  text-align: left;
+}
+
+.category-column div,
+.brand-column div {
+  padding-top: calc(100vw * 10.5 / 1366);
+}
+
+.category-column a,
+.brand-column a {
+  color: #383332;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.category-column a:hover,
+.brand-column a:hover {
+  cursor: pointer;
+  transition: color 0.2s;
+  color: #be303b;
+}
+
+.category-column a:active,
+.brand-column a:active {
+  color: #ef233c;
+  transition: color 0.1s;
+}
+
+.show-more-nav a {
+  color: #be303b;
+  font-weight: bold;
+}
+
+.category-column {
+  width: auto;
+  vertical-align: top;
+}
+
+.brand-column {
+  width: brand;
+  vertical-align: top;
+}
+
+/* Style BOD */
+
+.brand-column div {
+  text-transform: lowercase;
+}
+
+.brand-column div:first-letter {
+  text-transform: uppercase;
+}
+
+.brand-column div::first-line {
+  text-transform: capitalize;
+}
+
+.all-optics3-column {
+  width: 100%;
+  margin-top: calc(100vw * 20 / 1366);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+/* Hidden container for the mega-menu. Uses opacity and height transitions for smooth, JS-triggered deployment over the DOM tree. */
+.additional-navbar1,
+.additional-navbar2 {
+  display: none;
+  opacity: 0;
+  height: 0;
+  transition:
+    opacity 0.3s ease-in-out,
+    height 0.3s ease-in-out;
+}
+
+.show-navbar {
+  display: block !important;
+  opacity: 1;
+  height: auto;
+}
+
+.hide-navbar {
+  display: none !important;
+  opacity: 0;
+  height: 0;
+}
+
+.larger-click-area-nav2 {
+  display: inline-flex;
+  align-items: center;
+  padding-top: calc(100vw * 22 / 1366);
+  padding-bottom: calc(100vw * 22 / 1366);
+}

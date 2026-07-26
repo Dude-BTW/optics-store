@@ -1,0 +1,185 @@
+/* Primary Navigation Bar (Top Level): Minimalist header section handling system-wide utilities like i18n (language switching) and basic contact info. */
+
+/* Navbar 1 */
+
+/* Flexbox container ensuring horizontal distribution and vertical alignment of navbar elements. */
+.navbar-container1 {
+  background-color: #383332;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: calc(100vw * 10 / 1366) calc(100vw * 20 / 1366);
+  font-size: calc(100vw * 11 / 1366);
+  height: calc(100vw * 30 / 1366);
+  position: relative;
+  z-index: 900;
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-left span,
+.navbar-center span,
+.navbar-right span {
+  margin: 0 calc(100vw * 10 / 1366);
+  transition:
+    color 0.2s,
+    text-decoration-color 0.2s,
+    text-underline-offset 0.2s;
+}
+
+#navbar1-container .navbar-left span:hover,
+#navbar1-container .navbar-right span:hover,
+#navbar1-container .navbar-center span:hover {
+  color: #e6746d;
+}
+
+.navbar-center span {
+  margin: 0 calc(100vw * 15 / 1366);
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+.phone-icon {
+  width: calc(100vw * 20 / 1366);
+  height: auto;
+}
+
+.dropdown1-icon {
+  width: calc(100vw * 11 / 1366);
+  height: auto;
+  margin-bottom: calc(100vw * 1 / 1366);
+  transition: transform 0.2s;
+}
+
+/* Dropdown with Animation */
+
+/* Interactive dropdown module managing the i18n language selector. Includes transform-based animations for smooth rendering. */
+.dropdown1 {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown1-content {
+  display: block;
+  position: absolute;
+  background-color: white;
+  box-shadow: calc(100vw * 0 / 1366) calc(100vw * 8 / 1366)
+    calc(100vw * 16 / 1366) calc(100vw * 0 / 1366) rgba(0, 0, 0, 0.2);
+  min-width: auto;
+  white-space: nowrap;
+  margin-left: calc(100vw * 18 / 1366);
+  overflow: hidden;
+  overflow-y: auto;
+  transform-origin: top center;
+  transition:
+    max-height 0.5s ease,
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0.4);
+}
+
+.dropdown1-content-button button {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background-color: white;
+  box-sizing: border-box;
+  padding: calc(100vw * 8 / 1366) calc(100vw * 12 / 1366);
+  min-height: calc(100vw * 40 / 1366);
+  max-height: calc(100vw * 55 / 1366);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #383332;
+  font-size: calc(100vw * 11 / 1366);
+  text-decoration: none;
+}
+
+.ua-en {
+  margin-left: calc(100vw * 12 / 1366);
+  min-width: calc(100vw * 55 / 1366);
+  text-align: center;
+  align-items: center;
+}
+
+.dropdown1-content a {
+  color: #383332;
+  padding: calc(100vw * 8 / 1366) calc(100vw * 12 / 1366);
+  height: calc(100vw * 40 / 1366);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: calc(100vw * 11 / 1366);
+}
+
+.dropdown1-content a,
+.dropdown1-content button {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+.dropdown1-content a:hover {
+  background-color: #e9ecef;
+  color: #e6746d;
+}
+
+/* Appearance and Disappearance Animations */
+
+.dropdown1:hover .dropdown1-content {
+  max-height: auto;
+  opacity: 1;
+  visibility: visible;
+  transform: scaleY(1);
+}
+
+.dropdown1-content.hide {
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: scaleY(0.4);
+}
+
+.dropdown1:hover .dropdown1-icon {
+  transform: scaleY(-1);
+}
+
+.navbar-center span,
+.navbar-right span,
+.navbar-center .dropdown1-content a,
+.dropdown1-content button {
+  user-select: none;
+}
+
+.navbar-container1 img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.larger-click-area-nav1 {
+  padding: calc(100vw * 7 / 1366) calc(100vw * 15 / 1366);
+  display: inline-flex;
+  align-items: center;
+}

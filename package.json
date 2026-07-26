@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@cospired/i18n-iso-languages": "^4.2.0",
+    "cyrillic-to-translit-js": "^3.2.1",
+    "i18n-js": "^4.5.1"
+  }
+}
