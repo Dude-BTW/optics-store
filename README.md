@@ -43,7 +43,7 @@ The database architecture is complemented by a custom system for two-way asynchr
 
 The client side is built on the Freemarker template engine, complemented by HTML, CSS, and client-side JavaScript for dynamic interaction with the DOM tree. The interface is built using flex and grid layouts for responsive content display across various devices.
 
-A rich set of interactive UI components is implemented: navigation bars with mega-menu support, product and brand carousels, as well as modules for dynamic filtering (faceted search) and search. The product details page supports dynamic interface state changes depending on the selected configurations (e.g., color), automatically updating the image, price, SKU, and cart interaction form. User feedback modules are implemented, including sections for questions, reviews, and general store ratings, supporting client-side form validation, dynamic pagination, data sorting, and asynchronous UI state updates during CRUD operations. The logic for switching languages (i18n) and the functionality for tracking the history of viewed products are implemented separately.
+A rich set of interactive UI components is implemented: navigation bars with mega-menu support, product and brand carousels, as well as modules for dynamic filtering (faceted search) and search. The product details page supports dynamic interface state changes depending on the selected configurations (e.g., color), automatically updating the image, price, SKU, and cart interaction form. User feedback modules are implemented, including sections for questions, reviews, and general store ratings, supporting client-side form validation, dynamic pagination, data sorting, and asynchronous UI state updates during CRUD operations. Functionality for tracking the history of viewed products are implemented separately.
 
 ## Interface and Functionality Demonstration
 
@@ -70,7 +70,7 @@ Demonstration of the Home Page vertical scrolling. Rendering of UI components is
 
 https://github.com/user-attachments/assets/27595990-20d6-4041-841a-eea5b1ebb35d
 
-Testing the interactivity of UI elements (hover effects). Demonstration of navbar elements' hover states. Hovering over a menu item triggers the rendering of a standard dropdown menu. Hovering over a category initiates the deployment of a mega-menu with columns of filtering parameters and rendered product cards. The operation of functional header icons is demonstrated: opening the search input field, localization switcher (i18n), profile, and cart icons. Next, the hero slider event listener is tested: switching images via navigation elements. In the second half, interaction with the brand carousel via the drag-and-drop scrollbar is shown.
+Testing the interactivity of UI elements (hover effects). Demonstration of navbar elements' hover states. Hovering over a menu item triggers the rendering of a standard dropdown menu. Hovering over a category initiates the deployment of a mega-menu with columns of filtering parameters and rendered product cards. The operation of functional header icons is demonstrated: opening the search input field, profile, and cart icons. Next, the hero slider event listener is tested: switching images via navigation elements. In the second half, interaction with the brand carousel via the drag-and-drop scrollbar is shown.
 
 #### 1 - Functionality 2.1
 
@@ -203,7 +203,7 @@ Testing the routing and search system. Navigating through pages via footer links
 
 https://github.com/user-attachments/assets/5c25908b-711a-431f-b66a-bd122ea0d7e1
 
-Demonstration of E2E functionality of the web application. Testing CRUD operations for reviews on various pages. Changing the site localization state (i18n). Testing the Product Details Page: dynamic UI updating (image, SKU, availability) when changing the state of product attributes. Interaction with modal windows and content tabs. Submitting feedback forms and availability subscriptions. Testing faceted search (filtering) and sorting logic in catalog components. Checking the routing system. Testing authentication modules: submitting the registration form and login, which changes the user's authorization state in the system.
+Demonstration of E2E functionality of the web application. Testing CRUD operations for reviews on various pages. Testing the Product Details Page: dynamic UI updating (image, SKU, availability) when changing the state of product attributes. Interaction with modal windows and content tabs. Submitting feedback forms and availability subscriptions. Testing faceted search (filtering) and sorting logic in catalog components. Checking the routing system. Testing authentication modules: submitting the registration form and login, which changes the user's authorization state in the system.
 
 ## Third-Party Assets
 
