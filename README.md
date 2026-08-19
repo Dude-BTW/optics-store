@@ -4,15 +4,6 @@ Incomplete e-commerce platform for an offline optics store.
 
 The project is an e-commerce platform developed for an offline optics store. The solution architecture is based on a Server-Side Rendering (SSR) approach and is divided into Back-end and Front-end components. The platform's purpose is to facilitate the customer service process, including interaction with the product catalog, filtering and search systems, authentication mechanisms, and functionality for submitting reviews and ratings.
 
----
-
-> **Profile Verification / Portfolio Note**  
-> This repository serves as a portfolio project for job applications. It is officially linked to the profiles registered with the following email addresses:
-> - `robota.ua@for-job-search.knows-all-and-nothing.com`
-> - `work.ua@for-job-search.knows-all-and-nothing.com`
-
----
-
 ## Table of Contents
 
 - [Tech Stack](#tech-stack)
